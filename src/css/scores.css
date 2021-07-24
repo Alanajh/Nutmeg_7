@@ -1,0 +1,37 @@
+.scoreBelt{
+  /*
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;  
+  width: 100vmin; */
+}
+
+.scoreBelt{
+  border: 2px solid gray;/* 
+  width: 100vmin; */
+  }
+
+#btn_MainMenu{
+  background-color: darkblue;
+  border: 2px solid white;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  color: lightskyblue;
+  font-weight: bold;
+  margin: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition-duration: 0.4s;
+}
+#btn_MainMenu:hover{
+  background-color: lightskyblue;
+  color: white
+}
+#btn_MainMenu:active {
+  background-color: darkblue;
+  box-shadow: 0 4px skyblue;
+  transform: translateY(3px);
+}

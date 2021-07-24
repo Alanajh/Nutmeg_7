@@ -1,0 +1,87 @@
+/********* HTML *********/
+body {
+  background-color: brown;
+  margin: 0;
+  padding: 0;
+}
+div{
+  color: white;
+  margin: 10px;
+}
+
+/************ CLASSES ***********/
+.App {
+  background-color: brown;
+}
+
+.App-logo {
+  min-width: 20vmin;
+  height: 20vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: brown;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.col-1 { 
+  margin: 0;
+  padding: 0;/* 
+  width: 5%; */
+ }
+.col-2 { 
+  text-align: center;/* 
+  width: 85%;  */
+}
+/* .col-3 { width: 10%; } */
+.col-4 { 
+  text-align: center;
+ /*  width: 96%; */
+}
+/* .col-4a{
+  width: 2%;
+}
+.col-4b{
+  width: 2%;
+} */
+.col-5, .col-7 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100vmin;
+}
+
+ul {
+  list-style-type: none;
+ /*  padding-right: 65px; */
+}
+.row {
+  display: flex;
+  text-align: center;
+}
+.row::after {
+  display: flex;
+  clear: both;
+  content: "";
+}
+.submitBtn{
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 10px;
+}
+/* ********** ID ******* */
+#hints > li{
+  padding-bottom: 25px;
+}
+#q{
+  padding-bottom: 25px;
+}
+
