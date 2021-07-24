@@ -93,7 +93,7 @@ const TakeTestFun = (props) =>{
     console.log(props.test_1);
     const firstTest = props.test_1;
     const results = firstTest.map((item) => 
-        <li><input type="radio"/>{item}</li>
+        <li><input type="radio"/>{item.title}</li>
     );
    /*  const firstTest = props.test_1;
     const results = firstTest.map((item) => 
