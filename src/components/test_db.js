@@ -1,5 +1,6 @@
 import { Component, React } from 'react';
 
+import '../css/takeTest.css';
 
 function FullList(){
     const test_titles = [
@@ -38,8 +39,9 @@ function FullList(){
     
       ];
     const testListData = test_titles.map(item => (
-        <a href=""><h3>{item.title} - {item.genre}</h3></a>
+        <a href="" id="titles"><h3>{item.title} - {item.genre}</h3></a>
     ))  
+    
     return <div>
         <div>
             {testListData}

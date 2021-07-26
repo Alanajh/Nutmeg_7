@@ -36,13 +36,14 @@ class Login extends Component {
 
         let user = document.getElementById('loginInputUsername').value;
         let password = document.getElementById('loginInputPassword').value;
-
-        if(user==="admin" & password==="admin"){
+        this.setState({ loginScreen: false});
+        btn.remove();
+        /* if(user==="admin" & password==="admin"){
             this.setState({ loginScreen: false});
             btn.remove();
         }else{
             console.log('Incorrect login. Please try again');
-        }
+        } */
     }
     
     render() {

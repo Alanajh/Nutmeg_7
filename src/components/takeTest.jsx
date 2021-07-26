@@ -1,6 +1,6 @@
 /* eslint-disable react/no-direct-mutation-state */
 /* eslint-disable no-undef */
-import { Component} from 'react';
+import { Component } from 'react';
 //import '../css/App.css'
 import '../css/login.css';
 import nutmegLogo from '../media/nutmeg-800x800.png';
@@ -45,7 +45,6 @@ const test_titles = [
     }
 
   ];
-
 
 const test_1 = [
     {
@@ -129,11 +128,6 @@ const test_1 = [
         hint_3: 'The North and South Towers of The World Trade Center',
     }
 ];
-const hunt = [
-    "A title",
-    "B title",
-    "C title",
-]
 
 class TakeTest extends Component {
     
@@ -145,7 +139,7 @@ class TakeTest extends Component {
             count: 0,
             index: 0,
             question: 'Are you ready?',
-            questions: 0,
+            questions: 1,
             right: 0,
             score: 0,
             scoreScreen: false,
@@ -158,30 +152,16 @@ class TakeTest extends Component {
         };
     }
     componentDidMount(){
-        document.getElementById('q').innerHTML = "Let's Begin";
-    }
-    answers = () => {
-        let answers = document.getElementsByName("answers");
-        let verifiedAnswer = document.getElementById("verifiedAnswer");
-        let correctAnswer = test_1[this.state.target].answer;
-
-        if(answers[0].checked){ verifiedAnswer.innerHTML = test_1[this.state.target].target[0].option_1; }
-        else if(answers[1].checked){ verifiedAnswer.innerHTML = test_1[this.state.target].target[0].option_2; }
-        else if(answers[2].checked){ verifiedAnswer.innerHTML = test_1[this.state.target].target[0].option_3; }
-        else if(answers[3].checked){ verifiedAnswer.innerHTML = test_1[this.state.target].target[0].option_4; }
-        
-        if(correctAnswer === verifiedAnswer.innerHTML){
-            console.log('hello');
-            this.getNextQuestion();
-        }else{
-            console.log("wrong");
-        }
+      //  document.getElementById('q').innerHTML = "Let's Begin";
     }
    
     getNextQuestion = () => {
         let qa = '';
+        let answers = document.getElementsByName("answers");
+        let verifiedAnswer = document.getElementById("verifiedAnswer");
+        let correctAnswer = test_1[this.state.target].answer;
         
-       if(this.state.questions === test_1.length ){
+       if(this.state.questions + 1 === test_1.length + 1){
         qa = 'Test Complete';
         /////////////  test Score and Percentage %  ////////////
             this.state.target = test_1.length;
@@ -192,24 +172,23 @@ class TakeTest extends Component {
             this.setState({ target:  0}); //restarts the test
             moveBtn.disabled = true;
             setTimeout(this.end_of_test, 1000);
-          /*   if(qa === 'Test Complete'){
-                this.setState({ scoreScreen: true});
-            } */
         }else{ 
             /////// ACTIVE TEST ////////
-            this.setState({ right: this.state.right + 1});
             qa = test_1[this.state.target].target[0].question;
+
+            if(answers[0].checked){ verifiedAnswer.innerHTML = test_1[this.state.target].target[0].option_1; }
+            else if(answers[1].checked){ verifiedAnswer.innerHTML = test_1[this.state.target].target[0].option_2; }
+            else if(answers[2].checked){ verifiedAnswer.innerHTML = test_1[this.state.target].target[0].option_3; }
+            else if(answers[3].checked){ verifiedAnswer.innerHTML = test_1[this.state.target].target[0].option_4; }
             
-            
-            /* 
-            choice1 = test_1[this.state.target].target[0].option_1;
-            choice2 = test_1[this.state.target].target[0].option_2;
-            choice3 = test_1[this.state.target].target[0].option_3;
-            choice4 = test_1[this.state.target].target[0].option_4; */
-            document.getElementById('q').innerHTML = qa;
             this.setState({ questions: this.state.questions + 1});
             this.setState({ option_1: this.state.option_1 + 1 });
             this.setState({ target: this.state.target + 1}); 
+            if(correctAnswer === verifiedAnswer.innerHTML){
+                this.setState({ right: this.state.right + 1});
+            }else{
+                console.log("wrong");
+            }
         }
     }
 
@@ -218,11 +197,9 @@ class TakeTest extends Component {
         mainPg.innerHTML = "Main Menu";     
         moveBtn.disabled = false;
         moveBtn.innerHTML = "Exit";
-        //document.getElementById('moveBtn').onClick = this.title_list();
-       // moveBtn.onclick = function() {
-            this.setState({ scoreScreen: true});
+       
+        this.setState({ scoreScreen: true});
 
-       // }
         let testPg =  document.getElementById('testPg');
         testPg.remove();
         return(
@@ -240,20 +217,21 @@ class TakeTest extends Component {
                <tr>
                    <td id="col-1b"><img src={ nutmegLogo} id="logo" alt="logo" ></img></td>
                    <td id="col-2b"><h3>N * U * T * M * E * G</h3></td>
-                   <td id="col-3b">{this.state.questions}/{test_1.length}</td>
+                   <td id="col-3b">{this.state.questions}/{test_1.length}
+                        <p>{}</p>
+                   </td>
                </tr>
                <tr>
                    <td id="col-4a"><img src={ nutmegLogo} id="logo" alt="logo" ></img></td>
                    <td id="col-4">
                    <ul >
-                        <li id="q">Question: </li>
-                        <TakeTestFun test_1={test_1}/>
-                       {/*  <div className="unorderedList"> */}
-                            <li/><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/> {/* {test_1[this.state.target].target[0].option_1} */}
+                        <li id="q">{test_1[this.state.target].target[0].question}</li>
+                        <div className="unorderedList">
+                            <li/><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/> {test_1[this.state.target].target[0].option_1}
                             <li/><input type="radio" id="choice2" name="answers" value="choice2" onClick={this.answers}/> {test_1[this.state.target].target[0].option_2}
                             <li/><input type="radio" id="choice3" name="answers" value="choice3" onClick={this.answers}/> {test_1[this.state.target].target[0].option_3}
                             <li/><input type="radio" id="choice4" name="answers" value="choice4" onClick={this.answers}/> {test_1[this.state.target].target[0].option_4}
-                        A
+                        </div>
                         <div id="verifiedAnswer">__________________________</div>
                       
                         {/* <li>Answer</li>
@@ -270,7 +248,7 @@ class TakeTest extends Component {
                         className="submitBtn"
                         id="moveBtn"
                         type="button"
-                        onClick={this.answers}>Submit
+                        onClick={this.getNextQuestion}>Submit
                         </button>
                     </td>
                     <td id="col-4b">{this.state.questions}/{test_1.length}</td>
