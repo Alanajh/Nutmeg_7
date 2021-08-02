@@ -1,47 +1,29 @@
 /* eslint-disable react/no-direct-mutation-state */
 /* eslint-disable no-undef */
 import { Component} from 'react';
-//import '../css/App.css'
-import '../css/login.css';
+import '../css/App.css'
+
+/* import App from '../App';
 import nutmegLogo from '../media/nutmeg-800x800.png';
+import TestUL from './test_list';
+import Test3 from './Test2'; */
+import Login from './login';
 import Scores from './scores';
 import Fortran from './fortran';
-import TakeTest from './takeTest';
 
 const test_titles = [
     {
-        title: 'U.S. Event, Landmarks & Monuments',
-        genre: 'U.S. History'
+      title: 'U.S. Event, Landmarks & Monuments',
+      genre: 'U.S. History'
     },
     {
-        title: 'Great Lines from Great Works',
-        genre: 'Literature'
+      title: 'Great Lines from Great Works',
+      genre: 'Literature'
     },
     {
-        title: 'Famous Discoveries of Biological Science',
-        genre: 'Biology'
+      title: 'Famous Discoveries of Biological Science',
+      genre: 'Biology'
     },
-    {
-        title: 'Flags of the Americas',
-        genre: 'Geography'
-    },
-    {
-        title: 'Flags of Africa',
-        genre: 'Geography'
-    },
-    {
-        title: 'Flags of Europe',
-        genre: 'Geography'
-    },
-    {
-        title: 'The Elements of the Periodic Table',
-        genre: 'Science'
-    },
-    {
-        title: 'Famous Companies That Changed Their Names',
-        genre: 'Business'
-    }
-
   ];
 
 
@@ -127,7 +109,7 @@ const test_1 = [
     }
 ];
 
-class TestUL extends Component {
+class Test1 extends Component {
     
     constructor(props){
         super(props);
@@ -144,24 +126,19 @@ class TestUL extends Component {
             testScreen: true,
             index: 0,
             x: false,
-
         };
     }
     componentDidMount(){
-       // document.getElementById('q').innerHTML = "Let's Begin";
+      //  document.getElementById('q').innerHTML = "Let's Begin";
     }
     
-  /*   getNextQuestion = () => {
+   /*  getNextQuestion = () => {
         let qa = '';
-        let choice1 = '';
-        let choice2 = '';
-        let choice3 = '';
-        let choice4 = '';
         let moveBtn =  document.querySelector('#moveBtn');
-        
+        console.log(document.getElementsByTagName('button'));
+        console.log(this.state.x);
        if(this.state.questions === test_1.length ){
-         console.log(this.state.testListScreen);  
-        qa = 'Test Complete';
+            qa = 'Test Complete';
             this.state.target = test_1.length;
             document.getElementById('q').innerHTML = qa;
             this.setState({ questions: 0}); //restarts the test
@@ -169,35 +146,23 @@ class TestUL extends Component {
             moveBtn.disabled = true;
             setTimeout(this.end_of_test, 1000);
             if(qa === 'Test Complete'){
-                     
                 this.state.x = true;
+                console.log(this.state.x);
             }
         }else{ 
             qa = test_1[this.state.target].target[0].question;
-            choice1 = test_1[0].target[0].option_1;
-            choice2 = test_1[0].target[0].option_2;
-            choice3 = test_1[0].target[0].option_3;
-            choice4 = test_1[0].target[0].option_4;
             document.getElementById('q').innerHTML = qa;
-            document.getElementById('choice1').innerHTML = choice1;
-            document.getElementById('choice2').innerHTML = choice2;
-            document.getElementById('choice3').innerHTML = choice3;
-            document.getElementById('choice4').innerHTML = choice4;
             this.setState({ questions: this.state.questions + 1});
             this.setState({ target: this.state.target + 1}); 
-       
         }
     }
     end_of_test = () => {
-        let fullBody =  document.getElementById('mainBelt');
         moveBtn.disabled = false;
         moveBtn.innerHTML = "Exit";
         document.getElementById('moveBtn').onClick = this.title_list;
-        this.setState({ testListScreen: true });
-        console.log(this.state.testListScreen);  
     }
-   submit_button = () => {
 
+   submit_button = () => {
     if(this.state.count < test_titles.length){       
        console.log(test_titles[this.state.count].title);
     }else{
@@ -207,45 +172,9 @@ class TestUL extends Component {
 
     render() {
        return  <div className="belt" id="mainBelt">
-        { this.state.testScreen ? <TakeTest/> : <Scores/>}
-         {/*   <table>
-               <tr>
-                   <td id="col-1b"><img src={ nutmegLogo} id="logo" alt="logo" ></img></td>
-                   <td id="col-2b"><h3>N * U * T * M * E * G</h3></td>
-                   <td id="col-3b">{this.state.questions}/{test_1.length}</td>
-               </tr>
-               <tr>
-                   <td id="col-4a"><img src={ nutmegLogo} id="logo" alt="logo" ></img></td>
-                   <td id="col-4">
-                   <ul>
-                        <li id="q">Question: </li>
-                        <ul id="hints">
-                            <li id="choice1" type="radio"></li>
-                            <li id="choice2"></li>
-                            <li id="choice3"></li>
-                            <li id="choice4"></li>
-                        </ul>
-                        <li>Answer</li>
-                        <li>Submit</li>
-                        <li>Time / Settings</li>
-                    </ul>
-                   </td>
-                   <td id="col-4b"><img src={ nutmegLogo} id="logo" alt="logo" ></img></td>
-               </tr>
-               <tr>
-                   <td></td>
-                   <td> 
-                       <button
-                        className="submitBtn"
-                        id="moveBtn"
-                        type="button"
-                        onClick={this.getNextQuestion}>Submit
-                        </button>
-                    </td>
-                    <td id="col-4b">{this.state.questions}/{test_1.length}</td>
-               </tr>
-           </table> */}
-          {/* /*  <div className="row">
+           {<Login></Login>}
+          {/*
+           <div className="row">
           <div className="col-1">
             <img src={ nutmegLogo} id="logo" alt="logo" ></img>
           </div>
@@ -255,16 +184,14 @@ class TestUL extends Component {
             <div className="col-3" id="score">{this.state.questions}/{test_1.length}</div>
       </div>
         <div className="row">
-        <div className="col-4a" id="title"></div>
            <div className="col-4" id="title">
                     <p id="test_title">{test_titles[this.state.count].title}</p>
                 </div>
-            <div className="col-4b" id="title"></div>
             </div>
         <div className="row">
        <div className="col-5">
            <ul>
-               <li id="q">Question: </li>
+               <li id="q">Question:</li>
                <li>Answer</li>
                <li>Submit</li>
                <li>Time / Settings</li>
@@ -278,10 +205,10 @@ class TestUL extends Component {
             id="moveBtn"
             type="button"
             onClick={this.getNextQuestion}>Submit</button>
-        </div> 
+        </div>
         </div> */}
     </div>
     }
 
 }
-export default TestUL;
+export default Test1;

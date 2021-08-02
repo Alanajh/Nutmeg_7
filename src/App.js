@@ -1,12 +1,11 @@
 
-import 
-Login from './components/login';
+import Test1 from './components/test1';
 
 function App() {
   
   return (
     <div className="App">
-      <Login></Login>
+      <Test1></Test1>
     </div>
   );
 }

@@ -1,27 +1,4 @@
-#complete{
-    margin: 25px;
-}
-#filterBtn:active, #sortBtn:active{
-    top: 1px;
-    box-shadow: 2px 2px skyblue;
-    transform: translateY(3px);
-}
-#filterBtn:hover, #sortBtn:hover{
-    background-color:rgba(135,206,250, 50%);
-    border-radius: 10px;
-    padding-top: 8px;
-}
-#filterBtn, #sortBtn{
-    background-color: transparent;
-    border: none;
-    float: right;
-    font-size:x-large;
-    margin-right: 20px;
-    padding-top: 8px;
-}
-#testPageId{
-    width:auto;
-}
+
 #titles{
     color: white;
     text-align: left;

@@ -1,13 +1,54 @@
 /* eslint-disable react/no-direct-mutation-state */
 /* eslint-disable no-undef */
 import { Component } from 'react';
-import '../css/App.css'
+//import '../css/App.css'
 import '../css/login.css';
 import nutmegLogo from '../media/nutmeg-800x800.png';
 import Scores from './scores';
+import Fortran from './fortran';
+import TestUL from './test_list';
+
+import TakeTestFun from './takeTestFun';
+
+const test_titles = [
+    {
+        title: 'U.S. Event, Landmarks & Monuments',
+        genre: 'U.S. History'
+    },
+    {
+        title: 'Great Lines from Great Works',
+        genre: 'Literature'
+    },
+    {
+        title: 'Famous Discoveries of Biological Science',
+        genre: 'Biology'
+    },
+    {
+        title: 'Flags of the Americas',
+        genre: 'Geography'
+    },
+    {
+        title: 'Flags of Africa',
+        genre: 'Geography'
+    },
+    {
+        title: 'Flags of Europe',
+        genre: 'Geography'
+    },
+    {
+        title: 'The Elements of the Periodic Table',
+        genre: 'Science'
+    },
+    {
+        title: 'Famous Companies That Changed Their Names',
+        genre: 'Business'
+    }
+
+  ];
 
 const test_1 = [
     {
+         /// 0 are NO 1 are YES ?? //////
         test_id: '001',
         target: [
             {
@@ -125,6 +166,7 @@ class TakeTest extends Component {
         /////////////  test Score and Percentage %  ////////////
             this.state.target = test_1.length;
             this.state.score_Percentage = this.state.right/test_1.length * 100;
+            console.log("Percentage: " + this.state.score_Percentage);
             document.getElementById('q').innerHTML = qa;
             this.setState({ questions: 0}); //restarts the test
             this.setState({ target:  0}); //restarts the test
@@ -145,7 +187,7 @@ class TakeTest extends Component {
             if(correctAnswer === verifiedAnswer.innerHTML){
                 this.setState({ right: this.state.right + 1});
             }else{
-                this.setState({ right: this.state.right + 0});
+                console.log("wrong");
             }
         }
     }
@@ -160,6 +202,11 @@ class TakeTest extends Component {
 
         let testPg =  document.getElementById('testPg');
         testPg.remove();
+        return(
+            <div
+            testLength={test_titles.length}
+            />
+        );
     }
 
     render() {
