@@ -1,4 +1,5 @@
-import { React, Component } from 'react';
+import { Component, React } from 'react';
+
 import '../css/takeTest.css';
 
 const test_titles = [
@@ -51,35 +52,35 @@ const test_titles = [
         genre: 'American History'
     }
 
-  ];
+  ]; 
+
+test_titles.sort(function(itemTitle1,itemTitle2 ){
+    <a href="www" id="titles"><p>{itemTitle1.title}</p></a>
+        if(itemTitle1.title > itemTitle2.title){
+        return 1;
+    }else{ 
+        return -1;
+    }
+});
 const testTitleData = test_titles.map(item => (
     <a href="www" id="titles"><p>{item.title}</p></a>
 ));
 const testGenreData = test_titles.map(item => (
     <a href="www" id="titles"><p>{item.genre}</p></a>
-));   
+));
 
-class FullList extends Component{
-   
-    render() {
-        return  <div>
-                <p id='titles'>{testTitleData}</p>
-            </div>   
-     }
-}
-export class TestTitles extends Component { 
+export class TestTitlesSorted extends Component { 
     render() {
         return   <div>
             <p>{testTitleData}</p>
         </div>
      }
 }
-export class TestGenres extends Component { 
+export class TestGenresSorted extends Component { 
     render() {
         return   <div>
         <p>{testGenreData}</p>
     </div>
      }
 }
-    
-export default FullList; 
+

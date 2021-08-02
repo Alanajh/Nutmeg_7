@@ -4,6 +4,7 @@ import { Component} from 'react';
 import '../css/login.css';
 
 import nutmegLogo from '../media/nutmeg-800x800.png';
+import MainMenu from './MainMenu/mainMenu';
 import Test2 from './test_list';
 import LoginLogic from './loginLogic';
 import TakeTestFun from './takeTestFun';

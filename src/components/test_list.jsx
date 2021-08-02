@@ -5,6 +5,7 @@ import { Component} from 'react';
 import '../css/login.css';
 import nutmegLogo from '../media/nutmeg-800x800.png';
 import Scores from './scores';
+import MainMenu from './MainMenu/mainMenu';
 
 import TakeTest from './takeTest';
 
@@ -151,7 +152,7 @@ class TestUL extends Component {
   
     render() {
        return  <div className="belt" id="mainBelt">
-        { this.state.testScreen ? <TakeTest/> : <Scores/>}
+        { this.state.testScreen ? <MainMenu/> : <Scores/>}
         
     </div>
     }

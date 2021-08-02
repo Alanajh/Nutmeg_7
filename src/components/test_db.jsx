@@ -101,7 +101,7 @@ import TestTitles, { TestGenres }  from './TestReducer';
 import SortedTests from './sortedTests';
 import TestTitlesSorted, { TestGenresSorted } from './sortedTests'
 
-const test_titles = [
+/* const test_titles = [
     {
         title: 'U.S. Event, Landmarks & Monuments',
         genre: 'American History'
@@ -151,7 +151,14 @@ const test_titles = [
         genre: 'American History'
     }
 
-  ];
+  ]; */
+
+  const list = <FullList/>
+  const genreSorted = <TestGenresSorted/>
+  let testsSorted = <TestTitlesSorted/>
+  const testTitles = <TestTitles/>
+  const testGenres = <TestGenres/>
+  
 class TestPage extends Component {
     constructor(props){
         super(props);
@@ -176,12 +183,14 @@ class TestPage extends Component {
                 <th>Title
                     <button id='filterBtn'><IoFilterSharp/></button>
                     <button id='sortBtn' onClick={this.testTitleDataSorted}><BiSort/></button></th>
-                <th>Genre<button id='filterBtn'><IoFilterSharp/></button><button id='sortBtn'><BiSort/></button></th>
+                <th>Genre
+                    <button id='filterBtn'><IoFilterSharp/></button>
+                    <button id='sortBtn' onClick={this.genreeee}><BiSort/></button></th>
                 <th>Score</th>
             </tr>
             <tr id='mainData'>
-                <td id='titles'>{ this.state.sorted ? <SortedTests/> : <FullList/>}</td>
-                <td>{ this.state.sorted ? <TestGenresSorted/> : <TestGenres/>}</td>
+                <td id='titles'>{ this.state.sorted ? testsSorted : testTitles}</td>
+                <td>{ this.state.sorted ? genreSorted : testGenres}</td>
                 <td></td>
             </tr>
         </table>     
