@@ -2,14 +2,11 @@
 /* eslint-disable no-undef */
 import { Component} from 'react';
 //import '../css/App.css'
-import '../css/login.css';
-import nutmegLogo from '../media/nutmeg-800x800.png';
+//import '../css/login.css';
 import Scores from './scores';
-import MainMenu from './MainMenu/mainMenu';
+import MainMenu from './MainMenu/mainMenuScreen';
 
-import TakeTest from './takeTest';
-
-const test_titles = [
+/* const test_titles = [
     {
         title: 'U.S. Event, Landmarks & Monuments',
         genre: 'U.S. History'
@@ -41,6 +38,10 @@ const test_titles = [
     {
         title: 'Famous Companies That Changed Their Names',
         genre: 'Business'
+    },
+    {
+        title: 'Events That Shaped A Presidency',
+        genre: 'U.S. History'
     }
 
   ];
@@ -125,7 +126,7 @@ const test_1 = [
         hint_2: 'Osama Bin Laden - Al Qaeda',
         hint_3: 'The North and South Towers of The World Trade Center',
     }
-];
+]; */
 
 class TestUL extends Component {
     

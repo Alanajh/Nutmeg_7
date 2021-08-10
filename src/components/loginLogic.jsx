@@ -5,7 +5,7 @@ import '../css/login.css';
 
 import nutmegLogo from '../media/nutmeg-800x800.png';
 
-const logins = [
+/* const logins = [
     {
         username: 'Admin',
         password: 'Admin'
@@ -18,7 +18,7 @@ const logins = [
         username: 'login',
         password: 'login'
     },
-] 
+]  */
 class LoginLogic extends Component {
     
     
@@ -26,24 +26,20 @@ class LoginLogic extends Component {
         super(props);
         this.state = {
             loginScreen: true,
-            xxx: 'no no no',
-            x: ' ',
         }
         
     }
 
     loginBtn = () => {
-        let x = document.getElementById('loginInputUsername');
-        console.log(x);
-        this.setState({ loginScreen: false});
-        this.setState({x: x});
+/*         let x = document.getElementById('loginInputUsername');
+ */        this.setState({ loginScreen: false});
         return this.state.loginScreen & this.state.x;
     }
     
 
     render() {
        return  <div className="belt" id="login">
-           <table>
+           <table id="mainLoginTbl">
                <tr>
                    <td id="col-1"><img src={ nutmegLogo} id="logo" alt="logo" ></img></td>
                    <td id="col-2"><h3>N * U * T * M * E * G</h3></td>

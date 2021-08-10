@@ -1,6 +1,3 @@
-body{
-  overflow-x: hidden;
-}
 th{
   text-align: left;
 }
@@ -12,13 +9,6 @@ th{
   height:100vh;  
   width: 100vmin; */
 }
-
-.scoreBelt{
-  border: 2px solid purple;
-  padding-left: 120px;
-  width: 100vw;
-  }
-
 #btn_MainMenu{
   background-color: darkblue;
   border: 2px solid white;
@@ -31,7 +21,6 @@ th{
   padding-right: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
-  transition-duration: 0.4s;
 }
 #btn_MainMenu:hover{
   background-color: lightskyblue;

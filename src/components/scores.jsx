@@ -1,9 +1,8 @@
 /* eslint-disable react/no-direct-mutation-state */
 /* eslint-disable no-undef */
-import { Component, useState} from 'react';
-import '../css/scores.css';
+import { Component } from 'react';
+//import '../css/scores.css';
 
-import nutmegLogo from '../media/nutmeg-800x800.png';
 import FullList from './test_db.jsx';
 
 class Scores extends Component {

@@ -1,13 +1,14 @@
 /* eslint-disable react/no-direct-mutation-state */
 /* eslint-disable no-undef */
 import { Component } from 'react';
-import '../css/App.css'
-import '../css/login.css';
+/* import '../css/App.css' */
+import '../css/takeTest.css'; 
 import nutmegLogo from '../media/nutmeg-800x800.png';
 import Scores from './scores';
 
 const test_1 = [
     {
+        title: 'Events That Shaped A Presidency',
         test_id: '001',
         target: [
             {
@@ -54,7 +55,7 @@ const test_1 = [
         test_id: '003',
         target: [
             {
-                question: 'George W. Bush 2',
+                question: 'Richard Nixon',
                 option_1: 'Creationjhblj of HUD',
                 option_2: 'Hal,bhblt student loan interest',
                 option_3: 'First female president',
@@ -72,11 +73,29 @@ const test_1 = [
         test_id: '004',
         target: [
             {
-                question: 'George W. Bush 3',
+                question: 'Jimmy Carter',
                 option_1: 'Creation of HUDkv',
                 option_2: 'Halt student loan interesthbljhb',
                 option_3: 'First female president',
                 option_4: '911',
+            }
+        ],
+        answer: '911 - 3',
+        img: '',
+        points: '34',
+        hint_1: 'Flight 93',
+        hint_2: 'Osama Bin Laden - Al Qaeda',
+        hint_3: 'The North and South Towers of The World Trade Center',
+    },
+    {
+        test_id: '004',
+        target: [
+            {
+                question: 'Lydon B. Johnson',
+                option_1: 'Creation of HUD',
+                option_2: 'Signed The Civil Rights Act',
+                option_3: 'Passed the First Abortion Laws',
+                option_4: 'Outlawed LGBTQ+ Marriage',
             }
         ],
         answer: '911 - 3',
@@ -114,6 +133,22 @@ class TakeTest extends Component {
       //  document.getElementById('q').innerHTML = "Let's Begin";
     }
    
+    answers = () => {
+        let answers = document.getElementsByName("answers");
+        let verifiedAnswer = document.getElementById("verifiedAnswer");
+        let correctAnswer = test_1[this.state.target].answer;
+
+        if(answers[0].checked){ verifiedAnswer.innerHTML = test_1[this.state.target].target[0].option_1; }
+        else if(answers[1].checked){ verifiedAnswer.innerHTML = test_1[this.state.target].target[0].option_2; }
+        else if(answers[2].checked){ verifiedAnswer.innerHTML = test_1[this.state.target].target[0].option_3; }
+        else if(answers[3].checked){ verifiedAnswer.innerHTML = test_1[this.state.target].target[0].option_4; }
+        
+        if(correctAnswer === verifiedAnswer.innerHTML){
+           
+        }else{
+            
+        }
+    }
     getNextQuestion = () => {
         let qa = '';
         let answers = document.getElementsByName("answers");
@@ -179,7 +214,7 @@ class TakeTest extends Component {
                    <td id="col-4">
                    <ul >
                         <li id="q">{test_1[this.state.target].target[0].question}</li>
-                        <div className="unorderedList">
+                        <div id="unorderedList">
                             <li/><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/> {test_1[this.state.target].target[0].option_1}
                             <li/><input type="radio" id="choice2" name="answers" value="choice2" onClick={this.answers}/> {test_1[this.state.target].target[0].option_2}
                             <li/><input type="radio" id="choice3" name="answers" value="choice3" onClick={this.answers}/> {test_1[this.state.target].target[0].option_3}
@@ -194,7 +229,7 @@ class TakeTest extends Component {
                    </td>
                    <td id="col-4b"><img src={ nutmegLogo} id="logo" alt="logo" ></img></td>
                </tr>
-               <tr>
+               <tr id="submitBtn">
                    <td></td>
                    <td className="submitBtn"> 
                        <button

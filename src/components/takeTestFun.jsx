@@ -1,7 +1,8 @@
 import React from 'react';
 
+import testJSON from '../json/1.json';
+
 const TakeTestFun = (props) =>{
-    console.log(props.test_1[0].target);
     const firstAnswer = props.test_1[0].target;
     const secondAnswer = props.test_1[1].target;
     const thirdAnswer = props.test_1[2].target;

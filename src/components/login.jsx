@@ -3,11 +3,10 @@
 import { Component} from 'react';
 import '../css/login.css';
 
-import nutmegLogo from '../media/nutmeg-800x800.png';
-import MainMenu from './MainMenu/mainMenu';
+
 import Test2 from './test_list';
 import LoginLogic from './loginLogic';
-import TakeTestFun from './takeTestFun';
+
 
 /* const logins = [
     {
@@ -35,8 +34,8 @@ class Login extends Component {
     loginBtn = () => {
         let btn = document.getElementById('loginBtn');
 
-        let user = document.getElementById('loginInputUsername').value;
-        let password = document.getElementById('loginInputPassword').value;
+        /* let user = document.getElementById('loginInputUsername').value;
+        let password = document.getElementById('loginInputPassword').value; */
         this.setState({ loginScreen: false});
         btn.remove();
         /* if(user==="admin" & password==="admin"){
@@ -50,7 +49,7 @@ class Login extends Component {
     render() {
        return  <div className="belt" id="login">
               { this.state.loginScreen ? <LoginLogic/> : <Test2/>}  
-            <table>
+            <table id="loginTbl">
                 <tr>
                     <td></td>
                     <td> <button id="loginBtn" onClick={this.loginBtn}>Login</button></td>

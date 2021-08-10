@@ -1,5 +1,5 @@
 import { React, Component } from 'react';
-import '../css/takeTest.css';
+// import '../css/takeTest.css';
 
 const test_titles = [
     {
