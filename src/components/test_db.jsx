@@ -123,7 +123,7 @@ class TestPage extends Component {
             </tr>
             <tr>
                 <td></td>
-                <td><button onClick={this.tests} id='subBtn'>Main Menu</button></td>
+                <td>{/* <button onClick={this.tests} id='subBtn'>Main Menu</button> */}</td>
             </tr>
         </table>     
     </div>

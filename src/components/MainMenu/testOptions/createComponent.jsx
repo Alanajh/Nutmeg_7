@@ -20,7 +20,6 @@ class CreateTests extends Component {
         if(this.state.testScreen === false){      
             testTbl.hidden = true;
             this.setState({ testScreen: true});
-            console.log('createComp: ' + this.state.testScreen);
         }else{
             this.setState({ testScreen: false});
         }
