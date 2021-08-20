@@ -1,0 +1,35 @@
+#pgCreateComponent, #pgTestpage{
+    display: flex;
+    justify-content: center;
+}
+#testForm{
+    padding-top:50px;
+    text-align: center;
+    vertical-align: middle;
+}
+#testForm > label{
+    font-size: xx-large;
+}
+#testSelectSubmit{
+    border-radius: 15px;
+    margin: 10px;
+    padding-bottom: 10px;
+    padding-left: 155px;
+    padding-right: 155px;
+    padding-top: 10px;
+}
+label{
+    margin: 90px;
+}
+option{
+    font-size: x-large;
+}
+
+select {
+    display: block;
+    height:40px;
+    margin: auto;
+    width:350px;
+}
+
+
