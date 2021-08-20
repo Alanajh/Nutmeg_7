@@ -52,7 +52,7 @@ class EditCreateTests extends Component {
             <div id="pgTestpage">{this.state.testScreenList ? <TestPage/> : null }</div>
             <div id="pgCreateComponent">{this.state.createComponent ? <CreateTests/> : null }</div>
             </div>
-            <div>
+            <div id="menuBtnHldr">
             <button onClick={this.closeEverything} id='menuBtn'>Main Menu</button>
             </div>
  </div>

@@ -44,7 +44,7 @@ class CreateTests extends Component {
             </tr>
             <tr>
                 <td></td>
-                <td id='buttonHldr'><button onClick={this.tests} id='subBtn'>Main Menu</button></td>
+                <td><button>Add</button></td>
             </tr>
         </table>
         </div>
