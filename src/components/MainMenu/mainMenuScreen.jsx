@@ -1,10 +1,12 @@
 import { Component} from 'react';
+import { ThisMonthInstance } from 'twilio/lib/rest/api/v2010/account/usage/record/thisMonth';
 
 import '../../css/mainMenu.css';
 
 import Help from './helpScreen';
 import Reference from './referenceScreen';
 import EditCreateTests from './testOptions/editCreateTest';
+import Xtra from './x';
 
 class Menu extends Component {
     constructor(props){
@@ -16,7 +18,8 @@ class Menu extends Component {
             refereceScreen: false,
             roomreachScreen: false,
             testScreen: false,
-            mainMenu: true
+            mainMenu: true,
+            x: false,
         }
     }
     
@@ -72,12 +75,22 @@ class Menu extends Component {
             this.setState({ liveScreen: false});
         }
     }
+    xtra = () => {
+        if(this.state.x === false){
+            this.setState({ x: true});
+            this.mainMenu();
+
+        }else{
+            this.setState({ x: false});
+        }
+    }
     render() {
         return  <div id="mainPage">
             
             <div>{this.state.referenceScreen ? <Reference/> : null }</div>
             <div>{this.state.helpScreen ? <Help/> : null }</div>
             <div>{this.state.testScreen ? <EditCreateTests/> : null }</div>
+            <div>{this.state.x ? <Xtra/> : null }</div>
             <table id="mainmenu">
                 <tr>
                     <td></td>
@@ -107,6 +120,11 @@ class Menu extends Component {
                 <tr>
                     <td></td>
                     <td><button id="menuBtn" onClick={this.help}>Help</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button id="menuBtn" onClick={this.xtra}>X</button></td>
                     <td></td>
                 </tr>
                 

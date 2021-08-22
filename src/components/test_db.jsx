@@ -68,7 +68,6 @@ import TestTitlesSorted, { TestGenresSorted } from './sortedTests'
 class TestPage extends Component {
     constructor(props){
         super(props);
-            
         this.state = {
             sorted: false,
             testScreen: false,
@@ -78,6 +77,14 @@ class TestPage extends Component {
     componentDidMount = () => {
         
     }
+    closeEverything = () => {
+        const groupTestBtns = document.getElementById('group_TestBtns');
+        const menuBtn = document.getElementById('menuBtn');
+        groupTestBtns.remove();
+        menuBtn.remove();
+        this.setState({ createComponent: false });
+        this.setState({ testScreen: true });
+      }
     testTitleDataSorted = () => {
         if(this.state.sorted === false) {
             this.setState({ sorted: true});
@@ -89,14 +96,11 @@ class TestPage extends Component {
         const testTbl = document.getElementById('testTbl');  
 
         testTbl.hidden = false;
-        console.log('Testdb_1: ' + this.state.testScreen);
         if(this.state.testScreen === false){
-            console.log('Testdb_2: ' + this.state.testScreen);
             //const testTbl = document.getElementById('testTbl');
             //testTbl.remove();
             testTbl.hidden = true;
             this.setState({ testScreen: true});
-            console.log('Testdb_3: ' + this.state.testScreen);
         }else{
             this.setState({ testScreen: false});
         }
@@ -123,7 +127,7 @@ class TestPage extends Component {
             </tr>
             <tr>
                 <td></td>
-                <td><button onClick={this.tests} id='subBtn'>Main Menu</button></td>
+                <td>{/* <button onClick={this.tests} id='subBtn'>Main Menu</button> */}</td>
             </tr>
         </table>     
     </div>

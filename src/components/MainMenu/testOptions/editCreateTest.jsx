@@ -3,60 +3,57 @@ import { Component } from 'react'
 import '../../../css/testOptions.css';
 import TestPage from '../../test_db';
 import CreateTests from './createComponent';
+import Menu from '../mainMenuScreen';
 
 class EditCreateTests extends Component {
     constructor(props) {
     super(props);
     this.state = {
+        createComponent: false,
+        groupTestBtns: true,
         testScreen: false,
+        testScreenList: false,
         value: 'list'
     };
-
-    this.chooseTestEvent = this.chooseTestEvent.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
-  componentDidMount = () => {
+  grpBtns = () => {
     
-}
-  chooseTestEvent(event) {
-    this.setState({value: event.target.value});
-    /* if(this.state.value === 'list'){
-        this.setState({ testScreen: true });
-    } */
   }
 
-  handleSubmit(event) {
-    const testForm = document.getElementById('testForm');
-    const testPage = document.getElementById('pgTestpage');
-    const createComp = document.getElementById('pgCreateComponent');
-    if(this.state.value === 'list'){
-        this.setState({ testScreen: true });
-        testForm.remove();
-        createComp.remove();
-    } else if(this.state.value === 'create'){
-        this.setState({ createComponent: true });
-        testForm.remove();
-        testPage.remove();
-    }
+  listBtn = () => {
+    this.setState({ testScreenList: true });
+    this.setState({ createComponent: false });
+  }
+  createBtn = () => {
+    this.setState({ testScreenList: false });
+    this.setState({ createComponent: true });
+  }
+  editBtn = () => {
+
+  }
+  closeEverything = () => {
+    const groupTestBtns = document.getElementById('group_TestBtns');
+    const menuBtn = document.getElementById('menuBtn');
+    groupTestBtns.remove();
+    menuBtn.remove();
+    this.setState({ createComponent: false });
+    this.setState({ testScreenList: false });
+    this.setState({ testScreen: true });
   }
     render() {
         return <div>
-            <form onSubmit={this.handleSubmit} id='testForm'>
-                <label>
-                Tests: 
-                </label>
-                <select value={this.state.value} onChange={this.chooseTestEvent}>
-                    <option value="list" id="opt"></option>
-                    <option value="list" id="opt">List</option>
-                    <option value="create" id="opt">Create</option>
-                    <option value="edit" id="opt">Edit</option>
-                </select>
-               
-                <input type="submit" value="Submit" id='testSelectSubmit'/>
-            </form>
+         <div>{ this.state.testScreen ? <Menu/> : null }</div>
+            <div id="group_TestBtns">
+              <button id="testOptionsBtn" onClick={this.listBtn}>List</button>
+              <button id="testOptionsBtn" onClick={this.createBtn}>Create</button>
+              <button id="testOptionsBtn">Edit</button>
+            </div>
             <div>
-            <div id="pgTestpage">{this.state.testScreen ? <TestPage/> : null }</div>
+            <div id="pgTestpage">{this.state.testScreenList ? <TestPage/> : null }</div>
             <div id="pgCreateComponent">{this.state.createComponent ? <CreateTests/> : null }</div>
+            </div>
+            <div id="menuBtnHldr">
+            <button onClick={this.closeEverything} id='menuBtn'>Main Menu</button>
             </div>
  </div>
     }

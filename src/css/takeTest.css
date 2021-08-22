@@ -1,6 +1,18 @@
 th{
     text-align: left;
 }
+#addBtn{
+    border-radius: 8px;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+}
+#addBtnContainer{
+    padding-bottom: 5px;
+    padding-top: 10px;
+    text-align: right;
+}
 #buttonHldr{
     padding-top: 15px;
     text-align: right;
