@@ -1,94 +1,64 @@
 import { Component, React } from 'react';
-
+import { Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../css/testComp.css';
+import { IoFilterSharp } from 'react-icons/io5';
+import { BiSort } from 'react-icons/bi'
 import '../css/takeTest.css';
+import test_titles from '../json/testing_sample.json';
+import Test from './testComp';
 
-const test_titles = [
-    {
-        title: 'U.S. Event, Landmarks & Monuments',
-        genre: 'American History'
-    },
-    {
-        title: 'Great Lines from Great Works',
-        genre: 'Literature'
-    },
-    {
-        title: 'Famous Discoveries of Biological Science',
-        genre: 'Biology'
-    },
-    {
-        title: 'Flags of the Americas',
-        genre: 'Geography'
-    },
-    {
-        title: 'Flags of Africa',
-        genre: 'Geography'
-    },
-    {
-        title: 'Flags of Europe',
-        genre: 'Geography'
-    },
-    {
-        title: 'The Elements of the Periodic Table',
-        genre: 'Science'
-    },
-    {
-        title: 'Famous Companies That Changed Their Names',
-        genre: 'Business'
-    },
-    {
-        title: 'Zodiac Signs',
-        genre: 'Astrology'
-    },
-    {
-        title: 'Music of the 90s',
-        genre: 'Music'
-    },
-    {
-        title: 'Sounds of Motown',
-        genre: 'Music'
-    },
-    {
-        title: 'The Siege of/at Yorktown',
-        genre: 'American History'
-    }
-
-  ]; 
-
-test_titles.sort(function(itemTitle1,itemTitle2 ){
-    <a href="www" id="titles"><p>{itemTitle1.title}</p></a>
-        if(itemTitle1.title > itemTitle2.title){
-        return 1;
-    }else{ 
-        return -1;
-    }
-});
 const testTitleData = test_titles.map(item => (
-    <a href="www" id="titles"><p>{item.title}</p></a>
+    <p>{item.title}</p>
 ));
 const testGenreData = test_titles.map(item => (
-    <a href="www" id="titles"><p>{item.genre}</p></a>
+    <p>{item.genre}</p>
 ));
 
 class SortedTests extends Component { 
     render() {
-        return   <div>
-                <p id='titles'>{testTitleData}</p>
-            </div>  
+        return <div>{testTitleData}</div>  
      }
 }
 
 export class TestTitlesSorted extends Component { 
-    render() {
-        return   <div>
-            <p>{testTitleData}</p>
+    selectTest = (index, e) => {
+        console.log(test_titles
+            .filter( item => item.value === index)
+            .map( item => 
+                item.title
+            ) )}
+                
+            render() {
+                return   <div>
+    <Container id="container">
+                <Row id="testRowHeader">
+                    <Col xs={10} id="testColHeader">
+                       Title 
+                        <button id='filterBtn'><IoFilterSharp/></button>
+                        <button id='sortBtn' onClick={this.testTitleDataSorted}><BiSort/></button>
+                    </Col>
+                    <Col xs={2}>
+                        Genre
+                    </Col>
+                </Row> 
+            </Container> 
+            {test_titles.map((item, index) => {
+                return (<Test 
+                    key={test_titles.value}
+                    id={index} 
+                    identifier={item.genre}
+                    selectCurrent={this.selectTest.bind(this, index)}
+                    >{item.title}</Test>)
+            })}
         </div>
-     }
+    }
 }
+
 export class TestGenresSorted extends Component { 
     render() {
-        return   <div>
-        <p>{testGenreData}</p>
-    </div>
+        return <div>{testGenreData}</div>
      }
 }
+
 export default SortedTests;

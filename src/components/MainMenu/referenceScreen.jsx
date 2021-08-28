@@ -26,14 +26,19 @@ class Reference extends Component {
             <div id='ref'>
             <input></input>
             <table>
+                <thead>
                 <tr>
                     <th>Query</th>
                     <th>Definition</th>
                 </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td></td>
                     <td><button onClick={this.reference}>Main Menu</button></td>
                 </tr>
+                </tbody>
+                <tfoot></tfoot>
             </table>
             </div>
         </div>

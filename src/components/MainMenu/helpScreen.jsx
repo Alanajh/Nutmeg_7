@@ -25,6 +25,8 @@ class Help extends Component {
         return <div>
             <div>{this.state.menuScreen ? <Menu/> : null }</div>
             <table id='faqs'>
+            <thead></thead>
+                <tbody>
                 <tr><th>FAQs</th><th>Answer</th></tr>
                 <tr><td>Can I make a new test?</td>
                     <td>Yes. Click the dropdown on the main page next to test and you will see </td>
@@ -37,14 +39,18 @@ class Help extends Component {
                     <td>Tests can be timed or untimed by the creator or administrator.</td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td><h3>More to come soon...</h3></td>
                     <td></td>
                 </tr>
+                <tr><hr/></tr>
+                
                 <tr>
                     <td></td>
                     <td></td>
                     <td><button onClick={this.mainMenu}>Main Menu</button></td>
                 </tr>
+                </tbody>
+                <tfoot></tfoot>
             </table>
         </div>
     }

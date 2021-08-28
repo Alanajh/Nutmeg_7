@@ -1,12 +1,11 @@
 import { Component} from 'react';
-import { ThisMonthInstance } from 'twilio/lib/rest/api/v2010/account/usage/record/thisMonth';
 
 import '../../css/mainMenu.css';
 
 import Help from './helpScreen';
 import Reference from './referenceScreen';
 import EditCreateTests from './testOptions/editCreateTest';
-import Xtra from './x';
+import TakeTest from '../takeTest';
 
 class Menu extends Component {
     constructor(props){
@@ -90,8 +89,10 @@ class Menu extends Component {
             <div>{this.state.referenceScreen ? <Reference/> : null }</div>
             <div>{this.state.helpScreen ? <Help/> : null }</div>
             <div>{this.state.testScreen ? <EditCreateTests/> : null }</div>
-            <div>{this.state.x ? <Xtra/> : null }</div>
+            <div>{this.state.x ? <TakeTest/> : null }</div>
             <table id="mainmenu">
+            <thead></thead>
+                <tbody>
                 <tr>
                     <td></td>
                     <td><button id="menuBtn" onClick={this.tests}>Tests</button></td>
@@ -127,7 +128,8 @@ class Menu extends Component {
                     <td><button id="menuBtn" onClick={this.xtra}>X</button></td>
                     <td></td>
                 </tr>
-                
+                </tbody>
+                <tfoot></tfoot>
             </table>
             </div>   
      }

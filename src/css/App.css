@@ -1,6 +1,7 @@
+
 /********* HTML *********/
 body {
-  background-color: brown;
+  background-color: lightskyblue;
   margin: auto;
   padding: 0;
 }
@@ -10,18 +11,12 @@ div{
 }
 
 /************ CLASSES ***********/
-.App {
-  background-color: brown;
-}
-
-.App-logo {
-  min-width: 20vmin;
-  height: 20vmin;
-  pointer-events: none;
+.App, Container {
+  background-color:lightskyblue;
 }
 
 .App-header {
-  background-color: brown;
+  background-color:lightskyblue;
   display: flex;
   font-size: calc(10px + 2vmin);
   color: white;

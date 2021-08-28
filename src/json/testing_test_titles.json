@@ -54,6 +54,20 @@
     {
         "title": "The Siege of/at Yorktown",
         "genre": "American History"
+    },
+    {
+        "title": "Famous Characters From Literature",
+        "genre": "Literature"
+    }
+    ,
+    {
+        "title": "Famous Artist and Their Art",
+        "genre": "Art"
+    }
+    ,
+    {
+        "title": "Greek Mythology",
+        "genre": "Mythology"
     }
 
   ]

@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 import { Component } from 'react';
 //import '../css/scores.css';
-
+import NavBar from './navBar.jsx';
 import FullList from './test_db.jsx';
 
 class Scores extends Component {
@@ -19,18 +19,38 @@ class Scores extends Component {
     }    
    
     return_to_MainMenu = () => {
-        
         this.setState({menu: true});
+        let btn_MainMenu = document.getElementById('btn_MainMenu');
         let scoreRow = document.getElementById('trScore');
+        btn_MainMenu.remove();
         scoreRow.remove();
+    }
+    return_grade = () => {
+        let percent = this.props.right/this.props.len;
+        let letterGrade = "A";
+        if(percent <= 59){ letterGrade = "F"}
+        if(percent >= 60 && percent <= 66){letterGrade = "D"}
+        if(percent >= 67 && percent <= 69){letterGrade = "D+"}
+        if(percent >= 70 && percent <= 72){letterGrade = "C-"}
+        else if(percent >= 73 && percent <= 76){letterGrade = "C"}
+        else if(percent >= 77 && percent <= 79){letterGrade = "C+"}
+        else if(percent >= 80 && percent <= 82){letterGrade = "B-"}
+        else if(percent >= 83 && percent <= 86){letterGrade = "B"}
+        else if(percent >= 87 && percent <= 89){letterGrade = "B+"}
+        else if(percent >= 90 && percent <= 93){letterGrade = "A-"}
+        else if(percent >= 94){letterGrade = "A"} 
+        return letterGrade;
     }
     render() {
        return  <div className="scoreBelt" id="belt">
+           <NavBar/>
            <table className="tble">
+           <thead></thead>
+               <tbody>
                <tr className="trScoreClass" id="trScore">
                    <th id="header1">The History of Surgical Firsts</th>
-                   <th id="header2">{this.props.right}/{this.props.len} : {this.props.score_Percentage}<span>%</span> </th>
-                   <th id="header3">A+</th>
+                   <th id="header2">{this.props.right}/{this.props.len} : {this.props.score_Percentage}<span>% - {this.return_grade()}</span> </th>
+                   <th id="header3"></th>
                </tr>
                <tr>
                    <td></td>
@@ -47,6 +67,8 @@ class Scores extends Component {
                    <td></td>
                    <td><button id="btn_MainMenu" onClick={this.return_to_MainMenu}>Main Menu</button></td>
                </tr>
+               </tbody>
+               <tfoot></tfoot>
            </table>
     </div>
     }

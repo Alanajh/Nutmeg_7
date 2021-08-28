@@ -40,11 +40,14 @@ class LoginLogic extends Component {
     render() {
        return  <div className="belt" id="login">
            <table id="mainLoginTbl">
-               <tr>
-                   <td id="col-1"><img src={ nutmegLogo} id="logo" alt="logo" ></img></td>
-                   <td id="col-2"><h3>N * U * T * M * E * G</h3></td>
-                   <td id="col-3"><img src={ nutmegLogo} id="logo" alt="logo" ></img></td>
-               </tr>
+               <thead>
+                <tr>
+                   <th id="col-1"><img src={ nutmegLogo} id="logo" alt="logo" ></img></th>
+                   <th id="col-2"><h3>N * U * T * M * E * G</h3></th>
+                   <th id="col-3"><img src={ nutmegLogo} id="logo" alt="logo" ></img></th>
+                </tr>
+            </thead>
+            <tbody>
                <tr>
                    <td></td>
                    <td>
@@ -71,6 +74,8 @@ class LoginLogic extends Component {
                    <td></td>
                    <td></td>
                </tr>
+               </tbody>
+               <tfoot></tfoot>
            </table>
     </div>
     }

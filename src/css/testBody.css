@@ -1,0 +1,73 @@
+
+@media only screen and (max-width: 800px) {
+    #appName > h3{
+      color: blue;
+      font-size: medium;
+      
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    #appName > h3{
+      border: 2px solid blue;
+    }
+  }
+#appName{
+  padding: 35px;
+  text-align: center;
+}
+#buttonSubmit{
+ text-align: center; 
+}
+#buttonSubmit > #moveBtn{
+  border-radius: 7px;
+  background-color: aliceblue;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 8px;
+}
+#buttonSubmit > #moveBtn:active{
+  border-radius: 7px;
+  background-color: aliceblue;
+  padding-bottom: 7px;
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-top: 7px;
+}
+#colWarning{
+  color: darkred;
+  font-weight: bold;
+  margin: 10px;
+  text-align: center;
+}
+#container{
+  background-color: lightskyblue;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#currentTest > #c, #currentTestQuestion > #c{
+    padding: 20px;
+    text-align: center;
+  }
+#currentTestTitle > #c {
+  font-size: larger;
+  text-align: center;
+}
+#smallMenuBtn{
+  border-radius: 8px;
+  padding-bottom: 6px;
+  padding-left: 8px;
+  padding-right: 9px;
+  padding-top: 4px;
+}
+#score{
+  padding-top: 35px;
+  text-align: right;
+}
+#testBody, #selections{
+    border: 2px solid black;
+    text-align: center;
+    width: 100vw;
+}

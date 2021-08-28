@@ -50,13 +50,17 @@ class Login extends Component {
        return  <div className="belt" id="login">
               { this.state.loginScreen ? <LoginLogic/> : <Test2/>}  
             <table id="loginTbl">
+            <thead></thead>
+                <tbody>
                 <tr>
                     <td></td>
                     <td> <button id="loginBtn" onClick={this.loginBtn}>Login</button></td>
                     <td></td>
                 </tr>
+                </tbody>
+                <tfoot></tfoot>
             </table>
-    </div>
+        </div>
     }
 
 }

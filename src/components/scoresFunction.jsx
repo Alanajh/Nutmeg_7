@@ -9,10 +9,6 @@ import FullList from './test_db';
 
 function Scores(){
     const [menu, setMenu] = useState(false);
-    let score = 0;
-    let totalQuestions = 0;
-    let correctAnswers = 0;
-    let wrongAnswers = 0;
    
     const return_to_MainMenu = () => {
         setMenu(true);
@@ -20,6 +16,8 @@ function Scores(){
     return(  
     <div className="scoreBelt" id="belt">
         <table className="tble">
+        <thead></thead>
+        <tbody>
             <tr className="trScore" id="trScore">
                 <th id="header1">The History of Surgical Firsts</th>
                 <th id="header2">5/5 : 100% ------ </th>
@@ -40,6 +38,8 @@ function Scores(){
                 <td></td>
                 <td><button id="btn_MainMenu" onClick={return_to_MainMenu()}>Main Menu</button></td>
             </tr>
+            </tbody>
+            <tfoot></tfoot>
         </table>
 </div>
     );

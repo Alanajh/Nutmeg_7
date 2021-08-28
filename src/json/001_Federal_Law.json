@@ -1,10 +1,10 @@
 [
     {
         "title": "United States Landmark Supreme Court Cases",
-        "test_id": 2,
+        "test_id": 1,
         "target": [
             {
-                "question": "Brown v. board of Eduction",
+                "question": "Brown v. board of Education",
                 "option_1": "",
                 "option_2": "Separate But Equal",
                 "option_3": "",

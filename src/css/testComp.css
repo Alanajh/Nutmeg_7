@@ -1,0 +1,29 @@
+#container{
+    display: flex;
+    margin:0;
+    width: 100vw
+}
+#testGenre{
+    border-bottom: 1px solid red;
+    color: black;
+}
+#testRowHeader{
+    color: black;
+    font-size: large;
+    font-weight: bolder;
+}
+#testRows > #testCol{
+    border-bottom: 1px solid red;
+    padding: 8px;
+}
+#testRows > #testCol:hover, #testGenre:hover{
+    border-bottom: 4px solid red;
+    font-size: large;
+}
+#testRows > #testCol:active{
+    font-size:x-large;
+    font-weight: bolder;
+}
+#textBtnSelect{
+    border: none;
+}

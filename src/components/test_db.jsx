@@ -5,78 +5,20 @@ import { BiSort } from 'react-icons/bi'
 
 import '../css/takeTest.css';
 import Menu from './MainMenu/mainMenuScreen';
-import TestTitles, { TestGenres }  from './TestReducer'
-import TestTitlesSorted, { TestGenresSorted } from './sortedTests'
+import { TestTitles, TestGenres, FindTest }  from './TestReducer'
+import { TestTitlesSorted, TestGenresSorted } from './sortedTests'
 
-/* const test_titles = [
-    {
-        title: 'U.S. Event, Landmarks & Monuments',
-        genre: 'American History'
-    },
-    {
-        title: 'Great Lines from Great Works',
-        genre: 'Literature'
-    },
-    {
-        title: 'Famous Discoveries of Biological Science',
-        genre: 'Biology'
-    },
-    {
-        title: 'Flags of the Americas',
-        genre: 'Geography'
-    },
-    {
-        title: 'Flags of Africa',
-        genre: 'Geography'
-    },
-    {
-        title: 'Flags of Europe',
-        genre: 'Geography'
-    },
-    {
-        title: 'The Elements of the Periodic Table',
-        genre: 'Science'
-    },
-    {
-        title: 'Famous Companies That Changed Their Names',
-        genre: 'Business'
-    },
-    {
-        title: 'Zodiac Signs',
-        genre: 'Astrology'
-    },
-    {
-        title: 'Music of the 90s',
-        genre: 'Music'
-    },
-    {
-        title: 'Sounds of Motown',
-        genre: 'Music'
-    },
-    {
-        title: 'The Siege of/at Yorktown',
-        genre: 'American History'
-    }
-
-  ]; */
-
-  const genreSorted = <TestGenresSorted/>
-  let testsSorted = <TestTitlesSorted/>
-  const testTitles = <TestTitles/>
-  const testGenres = <TestGenres/>
   
 class TestPage extends Component {
     constructor(props){
         super(props);
         this.state = {
+            findTest: false,
             sorted: false,
             testScreen: false,
         }
     };
-    
-    componentDidMount = () => {
-        
-    }
+
     closeEverything = () => {
         const groupTestBtns = document.getElementById('group_TestBtns');
         const menuBtn = document.getElementById('menuBtn');
@@ -85,6 +27,13 @@ class TestPage extends Component {
         this.setState({ createComponent: false });
         this.setState({ testScreen: true });
       }
+    find = () => {
+        if(this.state.findTest === false) {
+            this.setState({ findTest: true});
+        }else{
+            this.setState({ findTest: false});
+        }
+    }
     testTitleDataSorted = () => {
         if(this.state.sorted === false) {
             this.setState({ sorted: true});
@@ -94,11 +43,8 @@ class TestPage extends Component {
     }
     tests = () => {
         const testTbl = document.getElementById('testTbl');  
-
         testTbl.hidden = false;
         if(this.state.testScreen === false){
-            //const testTbl = document.getElementById('testTbl');
-            //testTbl.remove();
             testTbl.hidden = true;
             this.setState({ testScreen: true});
         }else{
@@ -111,7 +57,8 @@ class TestPage extends Component {
         return  <div className="testPage" id="testPageId">
             <div>{this.state.testScreen ? <Menu/> : null }</div>
              <table id='testTbl'>
-            <tr id='mainData'>
+             <thead>
+            {/* <tr id='mainData'>
                 <th>Title
                     <button id='filterBtn'><IoFilterSharp/></button>
                     <button id='sortBtn' onClick={this.testTitleDataSorted}><BiSort/></button></th>
@@ -119,17 +66,22 @@ class TestPage extends Component {
                     <button id='filterBtn'><IoFilterSharp/></button>
                     <button id='sortBtn' onClick={this.genreeee}><BiSort/></button></th>
                 <th>Score</th>
-            </tr>
+            </tr> */}
+            </thead>
+            <tbody>
             <tr id='mainData'>
-                <td id='titles'>{ this.state.sorted ? testsSorted : testTitles}</td>
-                <td>{ this.state.sorted ? genreSorted : testGenres}</td>
-                <td></td>
+                <td id='titles'>{ this.state.sorted ? <TestTitlesSorted/> : <TestTitles/>}</td>
+                <td>{ this.state.sorted ? <TestGenresSorted/> : <TestGenres/>}</td>
             </tr>
             <tr>
                 <td></td>
-                <td>{/* <button onClick={this.tests} id='subBtn'>Main Menu</button> */}</td>
+                <td></td>
+                <td></td>
             </tr>
+            </tbody>
+            <tfoot></tfoot>
         </table>     
+        <div>{this.state.findTest ? <FindTest/> : null }</div>
     </div>
     }
 }
