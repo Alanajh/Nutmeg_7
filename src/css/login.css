@@ -88,52 +88,19 @@
     padding: 0;/* 
     width: 5%; */
    }
- .col-5 { 
-    text-align: center;
-  /*   width: 85%;  */
-  }
-/*   .col-6 { width: 10%; } */
+
 .hints{
   margin-right: 55px;
 } 
-.row {
-    display: flex;
-    width: 100%;
-  }
+
   .row::after {
     display: flex;
     clear: both;
     content: "";
   }
-  .submitBtn{
-    margin-left: 45px;
-  }
-  /* .unorderedList{
-    text-align: left;
-    margin-right: 25px;
-  } */
+
   *{
     background-color: lightskyblue;
   }
-  #loginBtn{
-    border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 8px;
-    transform: translate(-50%);
-  }
-#loginForm{
-    
-}
-#loginInputUsername, #loginInputPassword{
-  background-color: aliceblue;
-  border: none;
-  border-radius: 6px;
-  margin: 5px;
-  padding: 8px;
-}
-ul {
-  list-style-type: none;
- /*  padding-right: 65px; */
-}
+
+

@@ -1,0 +1,20 @@
+#ad{
+    animation-name: ad;
+    animation-delay: 10s;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+
+}
+#ad:active{
+    bottom: 5px;
+    box-shadow: 0px 0px 2px 2px red;
+    transform: translateY(5px);
+}
+@keyframes ad {
+    0%   {right:0px; bottom:80px;}
+    20%  {right:200px; bottom:80px;}
+    40%  {right:2px; bottom:80px;}
+    60%  {right: -168px; bottom:80px;}
+    64%  {right:2px; bottom:80px;}
+    100%  {right:2px; bottom:80px;}
+  }

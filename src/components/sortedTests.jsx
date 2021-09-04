@@ -1,7 +1,7 @@
 import { Component, React } from 'react';
 
 import '../css/takeTest.css';
-import test_titles from '../json/testing_sample.json';
+import test_titles from '../json/testing_test_titles.json';
 
 const testTitleData = test_titles.map(item => (
     <p>{item.title}</p>

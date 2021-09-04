@@ -2,9 +2,9 @@ import { React, Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/testComp.css';
-import test_titles from '../json/testing_sample.json';
+import test_titles from '../json/testing_test_titles.json';
 import Test from '../components/testComp';
-import law from '../json/001_Federal_Law.json';
+import TakeTest from './takeTest';
 
 import { IoFilterSharp } from 'react-icons/io5';
 import { BiSort } from 'react-icons/bi'
@@ -17,14 +17,15 @@ import { BiSort } from 'react-icons/bi'
 const findTest = test_titles
 .filter( item => item.value === 1)
 .map( item => 
-    <a href="www" id="titles" value={item.value}><p>{item.title}</p></a>
+    <p>{item.title}</p>
 ) 
 const testTitleData = test_titles.map((item, index, arr) => (
-    <a href="www" id="titles" value={item.value} key={index}  data-index={index}><p>{item.title}</p></a>
+    <p>{item.title}</p>
 ));
-const testGenreData = test_titles.map(item => (
+
+/* const testGenreData = test_titles.map(item => (
     <a href="www" id="titles" value={item.value} key={item.value}><p>{item.genre}</p></a>
-));   
+)); */   
 
 class FullList extends Component{
     render() {
@@ -38,13 +39,10 @@ export class TestTitles extends Component {
         super(props);
         this.state = {
             sorted: false,
+            turnOnTest: false,
         }
     }
 
-    // opens a test based on the target sent from the target function
-    openTest = (target) => {
-        
-    }
     // selects and filters the test based on the json value that equals the index of the clicked test
     selectTest = (index, e) => {
        return  console.log(test_titles
@@ -63,13 +61,23 @@ export class TestTitles extends Component {
     }
     // takes the selectTest and presents the correct title
     target = (selectTest) => {
-      test_titles.filter( item => item.value === selectTest)
-                    .map( item => 
-                        console.log(item.title + ": " + item.genre)             
-        )
+        let completeList = document.getElementById('completeList');
+        test_titles.filter( item => item.value === selectTest)
+        if(selectTest === 1){
+            completeList.remove();
+            this.setState({ turnOnTest: true})    
+        }
+    }
+    goopta = () => {
+        console.log(test_titles.map(item => {
+            return item.title
+        }));
+        
     }
     render() {
         return   <div>
+            <div>{this.state.turnOnTest ? <TakeTest/> : null }</div>
+            <div id="completeList">
              <Container id="container">
                 <Row id="testRowHeader">
                     <Col xs={10} id="testColHeader">
@@ -91,6 +99,7 @@ export class TestTitles extends Component {
                     >{item.title}</Test>)
             })}
            {/*  {testTitleData} */}
+           </div>
         </div>
      }
 }

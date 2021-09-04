@@ -6,6 +6,7 @@ import Help from './helpScreen';
 import Reference from './referenceScreen';
 import EditCreateTests from './testOptions/editCreateTest';
 import TakeTest from '../takeTest';
+import RoomReach from './roomReachScreen'
 
 class Menu extends Component {
     constructor(props){
@@ -55,6 +56,7 @@ class Menu extends Component {
     roomReach = () => {
         if(this.state.roomreachScreen === false){
             this.setState({ roomreachScreen: true});
+            this.mainMenu();
         }else{
             this.setState({ roomreachScreen: false});
         }
@@ -88,6 +90,7 @@ class Menu extends Component {
             
             <div>{this.state.referenceScreen ? <Reference/> : null }</div>
             <div>{this.state.helpScreen ? <Help/> : null }</div>
+            <div>{this.state.roomreachScreen ? <RoomReach/> : null }</div>
             <div>{this.state.testScreen ? <EditCreateTests/> : null }</div>
             <div>{this.state.x ? <TakeTest/> : null }</div>
             <table id="mainmenu">

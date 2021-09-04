@@ -40,13 +40,6 @@
   margin: 10px;
   text-align: center;
 }
-#container{
-  background-color: lightskyblue;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
 #currentTest > #c, #currentTestQuestion > #c{
     padding: 20px;
     text-align: center;
@@ -55,6 +48,17 @@
   font-size: larger;
   text-align: center;
 }
+#mainTestBoard{
+  background-color: lightskyblue;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+#score{
+  padding-top: 35px;
+  text-align: right;
+}
 #smallMenuBtn{
   border-radius: 8px;
   padding-bottom: 6px;
@@ -62,10 +66,7 @@
   padding-right: 9px;
   padding-top: 4px;
 }
-#score{
-  padding-top: 35px;
-  text-align: right;
-}
+
 #testBody, #selections{
     border: 2px solid black;
     text-align: center;

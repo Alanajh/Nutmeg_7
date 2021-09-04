@@ -1,8 +1,5 @@
 import { Component, React } from 'react';
 
-import { IoFilterSharp } from 'react-icons/io5';
-import { BiSort } from 'react-icons/bi'
-
 import '../css/takeTest.css';
 import Menu from './MainMenu/mainMenuScreen';
 import { TestTitles, TestGenres, FindTest }  from './TestReducer'

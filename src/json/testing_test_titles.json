@@ -4,6 +4,10 @@
         "genre": "Medical"
     },
     {
+        "title": "United States Landmark Supreme Court Cases",
+        "genre": "Law"
+    },
+    {
         "title": "World Leaders and Their Parties",
         "genre": "World History"
     },
@@ -68,6 +72,10 @@
     {
         "title": "Greek Mythology",
         "genre": "Mythology"
+    },
+    {
+        "title": "Identifying Algebraic Equations",
+        "genre": "Mathematics"
     }
 
   ]
