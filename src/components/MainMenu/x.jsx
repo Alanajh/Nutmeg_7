@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import '../../css/testFormatter.css'
-import law from '../../json/001_Federal_Law.json'
+import NavBar from '../navBar';
+import law from '../../json/001_Federal_Law.json';
+import TakeTest from '../takeTest';
 
 class Xtra extends Component {
     constructor(){
@@ -22,20 +24,21 @@ class Xtra extends Component {
     render(){
         return <div id="body">
             <div id="title">{law[this.state.targetTitle].title}</div>
-            <div id="heading">Question</div>
+            <div id="heading">Question ?</div>
             <div id="question">
                 {law[this.state.target].target[0].question}
             </div>
             <p/>
             <div id="options">
                 <ul>
-                    <li><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/>{law[this.state.target].target[0].option_1}</li>
+                    <li key="1"><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/> &nbsp;{law[this.state.target].target[0].option_1}</li>
                     <p/>
-                    <li><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/>{law[this.state.target].target[0].option_2}</li>
+                    <li key="2"><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/> &nbsp;{law[this.state.target].target[0].option_2}</li>
                     <p/>
-                    <li><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/>{law[this.state.target].target[0].option_3}</li>
+                    <li key="3"><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/> &nbsp;{law[this.state.target].target[0].option_3}</li>
                     <p/>
-                    <li><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/>{law[this.state.target].target[0].option_4}</li>
+                    <li key="4"><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/> &nbsp;{law[this.state.target].target[0].option_4}</li>
+                    <p/>
                 </ul>
             </div>
             <div id="btnHldr">

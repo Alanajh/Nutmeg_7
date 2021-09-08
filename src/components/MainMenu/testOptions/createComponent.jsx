@@ -56,6 +56,8 @@ class CreateTests extends Component {
         return <div>
             <div>{ this.state.testScreen ? <Menu/> : null }</div>
             <table id='testTbl'>
+            <thead></thead>
+                <tbody>
             <tr id='mainData'>
                 <td></td>
                 <td>
@@ -83,9 +85,13 @@ class CreateTests extends Component {
                     <button id="addBtn" onClick={this.addTestHeader}>Create Title</button>
                 </td>
             </tr>
+            </tbody>
+            <tfoot></tfoot>
         </table>
             
             <table>
+            <thead></thead>
+                <tbody>
                 <tr>
                     <th></th>
                     <th>
@@ -101,13 +107,19 @@ class CreateTests extends Component {
                     <td></td>
                     <td></td>
                 </tr>
+                <tfoot></tfoot>
+                </tbody>
             </table>
             <table id="QA">
+                <thead></thead>
+                <tbody>
                 <tr>
                 <td><ul>
                         <QuestionsList/>
                    </ul></td>
                 </tr>
+                </tbody>
+                <tfoot></tfoot>
             </table>
        </div>
     }

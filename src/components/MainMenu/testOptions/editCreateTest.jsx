@@ -16,11 +16,10 @@ class EditCreateTests extends Component {
         value: 'list'
     };
   }
-  grpBtns = () => {
-    
-  }
 
   listBtn = () => {
+    const groupTestBtns = document.getElementById('group_TestBtns');
+    groupTestBtns.remove();
     this.setState({ testScreenList: true });
     this.setState({ createComponent: false });
   }

@@ -1,0 +1,27 @@
+[
+   { 
+       "accounts": [
+           {
+                "username": "admin",
+                "password": "admin"
+           },
+           {
+                "username": "student",
+                "password": "student"
+           },
+           {
+                "username": "teacher",
+                "password": "teacher"
+           },
+           {
+                "username": "parent",
+                "password": "parent"
+           },
+           {
+                "username": "",
+                "password": ""
+           }
+
+        ]
+    }
+]

@@ -4,6 +4,10 @@
         "genre": "Medical"
     },
     {
+        "title": "United States Landmark Supreme Court Cases",
+        "genre": "Law"
+    },
+    {
         "title": "World Leaders and Their Parties",
         "genre": "World History"
     },
@@ -54,6 +58,24 @@
     {
         "title": "The Siege of/at Yorktown",
         "genre": "American History"
+    },
+    {
+        "title": "Famous Characters From Literature",
+        "genre": "Literature"
+    }
+    ,
+    {
+        "title": "Famous Artist and Their Art",
+        "genre": "Art"
+    }
+    ,
+    {
+        "title": "Greek Mythology",
+        "genre": "Mythology"
+    },
+    {
+        "title": "Identifying Algebraic Equations",
+        "genre": "Mathematics"
     }
 
   ]

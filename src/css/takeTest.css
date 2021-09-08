@@ -1,6 +1,4 @@
-th{
-    text-align: left;
-}
+
 #addBtn{
     border-radius: 8px;
     padding-bottom: 6px;
@@ -16,6 +14,9 @@ th{
 #buttonHldr{
     padding-top: 15px;
     text-align: right;
+}
+#col-1b{
+    width: 5px;
 }
 #filterBtn:active, #sortBtn:active{
     top: 1px;
@@ -34,25 +35,6 @@ th{
     font-size:x-large;
     margin-right: 20px;
     padding-top: 8px;
-}
-#mainBelt > #testPg{
-    border : 2px solid orange;
-    margin: auto;
-    padding-top: 50px;
-    width: 100vw;
-}
-#mainBelt > #testPg > tr > td{
-    /* border: 4px solid white;  TEST TEST TEST */
-    margin: auto;
-    text-align: center;
-    width: 100vw;
-}
-#moveBtn{
-    margin: auto;
-    padding-bottom: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 10px;
 }
 #q{
     padding-bottom: 20px;
@@ -73,6 +55,7 @@ th{
 }
 #testTbl{
     margin-top: 20px;
+    margin: 20px;
 }
 #titles{
     color: white;

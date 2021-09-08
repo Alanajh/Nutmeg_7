@@ -1,0 +1,6 @@
+#navBody{
+    border: 2px solid black;
+    display: flex;
+    min-height: 15%;
+    width: 100vw;
+  }
