@@ -12,6 +12,9 @@ import nutmegLogo from '../media/nutmeg-800x800.png';
 import Menu from '../components/MainMenu/mainMenuScreen';
 import law from '../json/001_Federal_Law.json';
 
+//// TESTING NEW TEST PAGE ////
+import NewTT from '../components/MainMenu/new_TakeTest';
+
 class TakeTest extends Component {
     
     constructor(){
@@ -136,6 +139,7 @@ class TakeTest extends Component {
 
     render() {
        return  <div className="belt" id="mainBelt">
+           
            <div>{ this.state.menuScreen ? <Menu/> : null }</div>
            {/* REPLACE WITH END OF TEST SCRIPT OR SCORE SCREEN */}
 {/*            { this.state.scoreScreen ? <Scores len={law.length} right={this.state.right} score_Percentage={this.state.score_Percentage}/> : null }

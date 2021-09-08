@@ -91,11 +91,11 @@ export class TestTitles extends Component {
                 </Row> 
             </Container> 
             {test_titles.map((item, index) => {
-                return (<Test 
+                return (<Test/*  
                     key={test_titles.value}
                     id={index} 
-                    identifier={item.genre}
-                    selectCurrent={this.target.bind(this, index)}
+                    identifier={item.genre}*/
+                    selectCurrent={this.target.bind(this, index)} 
                     >{item.title}</Test>)
             })}
            {/*  {testTitleData} */}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Button, Col, Collapse, Container, FormControl, InputGroup, Row } from 'react-bootstrap';
+import { Button, Col, Container, FormControl, InputGroup, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../css/animation.css';
 import NoSalt from '../../media/no_salt_red.png';
@@ -11,26 +11,31 @@ class Reference extends Component {
         super(props);
         this.state = {
             apiKey: 'c49f5474-fb60-46fb-8354-f39553264c15',
-            referenceScreen: false,
-            dictionaryURL: 'https://www.dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=',
+            definitionsQueue: [{},{}],
+            wordQueue: [{},{}],
+            dictionaryURL: 'https://www.dictionaryapi.com/api/v3/references/collegiate/json/trash?key=c49f5474-fb60-46fb-8354-f39553264c15',
+            referenceScreen: false
         }
     }
+    
     clearSearch = () => {
         document.getElementById('word').value = "";
     }
     getDefinition = () => {
         let word = document.getElementById('word').value;
-        console.log(word);
-    }
-    getId = () => {
-        let id = document.getElementsByClassName('ad');
-        if(id === 'ad'){
-            alert('hello');
-            id.id = 'beforeID';
-        }else if(id === 'beforeID'){
-            alert('hello');
-            id.id = 'ad';
-        }
+        let stack = [];
+
+        
+        fetch('https://www.dictionaryapi.com/api/v3/references/collegiate/json/' + word + '?key=c49f5474-fb60-46fb-8354-f39553264c15')
+        .then(response => {return response.json();})
+        .then((data) => {
+          
+            document.getElementById('query').innerHTML = word;
+            document.getElementById('definition').innerHTML = data[0].shortdef;
+        
+        })
+        
+        .catch(error => console.log(error));
     }
     reference = () => {
         if(this.state.referenceScreen === false){
@@ -64,8 +69,12 @@ class Reference extends Component {
                     <Col>Definition:</Col>
                 </Row>
                 <Row className='h-100' style={{ border: '2px solid white' }}>
-                    <Col></Col>
-                    <Col></Col>
+                    <Col id="query">
+                        <ul></ul>
+                        {this.getDefinition}
+                    </Col>
+                    <Col id="definition">
+                    </Col>
                 </Row>
                 <Row> 
                     <Col xs={5}></Col>
