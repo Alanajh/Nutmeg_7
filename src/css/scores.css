@@ -31,3 +31,7 @@ th{
   box-shadow: 0 4px skyblue;
   transform: translateY(3px);
 }
+#headerRow{
+  font-weight: bolder;
+  text-align: center;
+}

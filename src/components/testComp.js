@@ -9,7 +9,7 @@ const Test = (props) => {
             <Container id="container">
                 <Row id="testRows">
                     <Col xs={10} id="testCol">
-                        <button  id="textBtnSelect"onClick={props.selectCurrent}>
+                        <button  id="textBtnSelect" onClick={props.selectCurrent}>
                             <span onSelect={props.selectCurrent}>{props.children}</span>  
                         </button> 
                     </Col>

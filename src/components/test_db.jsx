@@ -2,7 +2,7 @@ import { Component, React } from 'react';
 
 import '../css/takeTest.css';
 import Menu from './MainMenu/mainMenuScreen';
-import { TestTitles, TestGenres, FindTest }  from './TestReducer'
+import { TestTitles, FindTest }  from './TestReducer'
 import { TestTitlesSorted, TestGenresSorted } from './sortedTests'
 
   
@@ -40,9 +40,9 @@ class TestPage extends Component {
     }
     tests = () => {
         const testTbl = document.getElementById('testTbl');  
-        testTbl.hidden = false;
+        //testTbl.remove();
         if(this.state.testScreen === false){
-            testTbl.hidden = true;
+            testTbl.remove();
             this.setState({ testScreen: true});
         }else{
             this.setState({ testScreen: false});
@@ -68,7 +68,7 @@ class TestPage extends Component {
             <tbody>
             <tr id='mainData'>
                 <td id='titles'>{ this.state.sorted ? <TestTitlesSorted/> : <TestTitles/>}</td>
-                <td>{ this.state.sorted ? <TestGenresSorted/> : <TestGenres/>}</td>
+                <td>{ this.state.sorted ? <TestGenresSorted/> : null}</td>
             </tr>
             <tr>
                 <td></td>

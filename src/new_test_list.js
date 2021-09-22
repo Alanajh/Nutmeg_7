@@ -1,4 +1,5 @@
-[
+const testTitles = 
+    [
     {
         "title": "Famous Medical Discoveries",
         "genre": "Medical",
@@ -98,3 +99,4 @@
     }
 
   ]
+export default testTitles;

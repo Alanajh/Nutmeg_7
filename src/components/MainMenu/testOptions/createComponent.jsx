@@ -1,5 +1,6 @@
 import { Component, useState } from 'react';
-
+import { Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../../css/takeTest.css';
 import Menu from '../mainMenuScreen';
 
@@ -55,6 +56,29 @@ class CreateTests extends Component {
     render(){
         return <div>
             <div>{ this.state.testScreen ? <Menu/> : null }</div>
+            <Container fluid>
+                <Row>
+                    <Col></Col>
+                    <Col></Col>
+                    <Col></Col>
+                </Row>
+                <Row>
+                    <Col></Col>
+                    <Col>
+                        <label>Title:</label>
+                        <input id="createdTitle"/>
+                        <p/>
+                        <label>Genre:</label>
+                        <input id="createdGenre"/>
+                    </Col>
+                    <Col></Col>
+                </Row>
+                <Row>
+                    <Col></Col>
+                    <Col></Col>
+                    <Col></Col>
+                </Row>
+            </Container>
             <table id='testTbl'>
             <thead></thead>
                 <tbody>

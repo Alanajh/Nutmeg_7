@@ -1,7 +1,10 @@
 [
     {
         "title": "Events That Shaped A Presidency",
-        "test_id": 1,
+        "test_id": 9,
+        "genre": "United States History",
+        "genreId": "US",
+        "head": "History",
         "target": [
             {
                 "question": "Theodore Roosevelt",

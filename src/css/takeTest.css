@@ -62,17 +62,11 @@
     text-align: left;
     text-decoration: none;
 }
-#titles:hover{
-    color: powderblue;
-    
-}
+
 #unorderedList{
-    margin: 10px;
     text-align: left;
 }
-#unorderedList > li{
-    margin: 5px;
-}
+
 #verifiedAnswer{
     padding-bottom: 40px;
 }
