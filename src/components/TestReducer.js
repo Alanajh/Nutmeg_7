@@ -69,8 +69,8 @@ export class TestTitles extends Component {
     }
 
     // takes the selectTest and presents the correct title
-    target = (identifier) => {
-        let r = document.getElementById('')
+    target = (identifier, i) => {
+        console.log(i.test_id)
     }
 
     render() {
@@ -92,10 +92,10 @@ export class TestTitles extends Component {
             
             {TestQuestionList.map((item, index) => {
                 return (<Test 
-                    key={TestQuestionList.value}
+                    key={item.test_id}
                     id={index} 
-                    identifier={item.test_id}
-                    selectCurrent={this.target.bind(this, index)}
+                    identifier={item.genre}
+                    selectCurrent={this.target.bind(this, index, item)}
                     >{item.title}</Test>)
             })}
            {/*  {testTitleData} */}
