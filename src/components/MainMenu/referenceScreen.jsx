@@ -1,87 +1,140 @@
-import React, { Component } from 'react';
+import { Component} from 'react';
 
-import { Button, Col, Collapse, Container, FormControl, InputGroup, Row } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../css/animation.css';
-import NoSalt from '../../media/no_salt_red.png';
-import Menu from './mainMenuScreen';
+import '../../css/mainMenu.css';
 
-class Reference extends Component {
+import Help from './helpScreen';
+import Reference from './referenceScreen';
+import EditCreateTests from './testOptions/editCreateTest';
+import TakeTest from '../takeTest';
+import RoomReach from './roomReachScreen'
+
+class Menu extends Component {
     constructor(props){
         super(props);
         this.state = {
-            apiKey: 'c49f5474-fb60-46fb-8354-f39553264c15',
-            referenceScreen: false,
-            dictionaryURL: 'https://www.dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=',
+            calendarScreen: false,
+            helpScreen: false,
+            liveScreen: false,
+            refereceScreen: false,
+            roomreachScreen: false,
+            testScreen: false,
+            mainMenu: true,
+            x: false,
         }
     }
-    clearSearch = () => {
-        document.getElementById('word').value = "";
+    
+    componentDidMount = () => {
+        this.setState({ testScreen: false});
     }
-    getDefinition = () => {
-        let word = document.getElementById('word').value;
-        console.log(word);
+    mainMenu = () => {
+        const menu = document.getElementById('mainmenu');
+        menu.remove();
     }
-    getId = () => {
-        let id = document.getElementsByClassName('ad');
-        if(id === 'ad'){
-            alert('hello');
-            id.id = 'beforeID';
-        }else if(id === 'beforeID'){
-            alert('hello');
-            id.id = 'ad';
+    help = () => {
+        if(this.state.helpScreen === false){
+            this.mainMenu();
+            this.setState({ helpScreen: true});
+        }else{
+            this.setState({ helpScreen: false});
+        }
+    }
+    tests = () => {
+        if(this.state.testScreen === false){
+            this.setState({ testScreen: true});
+            this.mainMenu();
+        }else{
+            this.setState({ testScreen: false});
+        }
+    }
+    scores = () => {
+        if(this.state.scoreScreen === false){
+            this.setState({ scoreScreen: true});
+        }else{
+            this.setState({ scoreScreen: false});
+        }
+    }
+    roomReach = () => {
+        if(this.state.roomreachScreen === false){
+            this.setState({ roomreachScreen: true});
+            this.mainMenu();
+        }else{
+            this.setState({ roomreachScreen: false});
         }
     }
     reference = () => {
-        if(this.state.referenceScreen === false){
-            const ref = document.getElementById('ref');
-            this.setState({ referenceScreen: true});
-            ref.remove();
-        }else{
+        if(this.state.referenceScreen === true){
             this.setState({ referenceScreen: false});
+        }else{
+            this.setState({ referenceScreen: true});
+            this.mainMenu();
         }
     }
-
-    render(){
-        return <div>
-            <div>{this.state.referenceScreen ? <Menu/> : null }</div>
-            <Container id="ref">
-                <Row>
-                    <Col xs={12}>
-                    <InputGroup className="mb-3" > 
-                        <FormControl
-                        placeholder="Definition Query"
-                        aria-label="Definition Query"
-                        aria-describedby="basic-addon2"
-                        id="word"/>
-                         <Button variant="outline-secondary" id="button-addon2"  onClick={this.getDefinition}>Search</Button>
-                         <Button variant="outline-secondary" id="button-addon2"  onClick={this.clearSearch}>clear</Button>
-                    </InputGroup>
-                    </Col>
-                </Row>
-                <Row className='h-100' style={{ border: '2px solid white' }}>
-                    <Col>Query:</Col>
-                    <Col>Definition:</Col>
-                </Row>
-                <Row className='h-100' style={{ border: '2px solid white' }}>
-                    <Col></Col>
-                    <Col></Col>
-                </Row>
-                <Row> 
-                    <Col xs={5}></Col>
-                    <Col xs={5}></Col>
-                    <Col xs={2}><img 
-                        src={NoSalt} 
-                        id="ad" 
-                        alt="No Salt FG" 
-                        style={{bottom: 80, float: 'right',right: 2, textAlign: 'right', position: 'fixed', width: 165, height: 165}}/></Col>
-                </Row>
-                
-                <Row style={{position: 'fixed', bottom: 20, right: 0}}>
-                    <Col xs={12}><Button onClick={this.reference} id='menuBtn'>Main Menu</Button></Col>
-                </Row>
-            </Container>
-        </div>
+    live = () => {
+        if(this.state.liveScreen === false){
+            this.setState({ liveScreen: true});
+        }else{
+            this.setState({ liveScreen: false});
+        }
     }
+    xtra = () => {
+        if(this.state.x === false){
+            this.setState({ x: true});
+            this.mainMenu();
+
+        }else{
+            this.setState({ x: false});
+        }
+    }
+    render() {
+        return  <div id="mainPage">
+            
+            <div>{this.state.referenceScreen ? <Reference/> : null }</div>
+            <div>{this.state.helpScreen ? <Help/> : null }</div>
+            <div>{this.state.roomreachScreen ? <RoomReach/> : null }</div>
+            <div>{this.state.testScreen ? <EditCreateTests/> : null }</div>
+            <div>{this.state.x ? <TakeTest/> : null }</div>
+            <table id="mainmenu">
+            <thead></thead>
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td><button id="menuBtn" onClick={this.tests}>Tests</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button id="menuBtn" onClick={this.scores}>Scores</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button id="menuBtn" onClick={this.roomReach}>Room Reach</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button id="menuBtn" onClick={this.reference}>Reference</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button id="menuBtn" onClick={this.live}>Live</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button id="menuBtn" onClick={this.help}>Help</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button id="menuBtn" onClick={this.xtra}>X</button></td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+            </div>   
+     }
 }
-export default Reference;
+export default Menu;

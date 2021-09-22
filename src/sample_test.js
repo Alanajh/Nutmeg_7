@@ -13,12 +13,3 @@ export default class Test {
 export function printTestLink(test){
     console.log(`./json/${test.testId}_${test.head}_${test.genreId}.json`)
 }
-
-const test = { value: 3 }
-
-
-import (`./json/${test.testId}_${test.head}_${test.genreId}.json`)
-.catch(() => import('./new_test_list'))
-.then(({ default: tests }) => {
-    console.log(tests.genre);
-})

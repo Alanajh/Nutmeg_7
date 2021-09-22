@@ -90,14 +90,6 @@ export class TestTitles extends Component {
                 </Row> 
             </Container> 
             
-            {TestQuestionList.map((item, index) => {
-                return (<Test 
-                    key={item.test_id}
-                    id={index} 
-                    identifier={item.genre}
-                    selectCurrent={this.target.bind(this, index, item)}
-                    >{item.title}</Test>)
-            })}
            {/*  {testTitleData} */}
            </div>
         </div>
