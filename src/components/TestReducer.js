@@ -100,6 +100,7 @@ export class TestTitles extends Component {
                     id={index} 
                     identifier={item.genre}
                     selectCurrent={this.target.bind(this, index, item)}
+
                     >{item.title}</Test>)
             })}
            </div>

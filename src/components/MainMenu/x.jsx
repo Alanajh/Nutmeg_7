@@ -23,7 +23,6 @@ class Xtra extends Component {
     }
     render(){
         return <div id="body">
-            <TakeTest/>
             <div id="title">{law[this.state.targetTitle].title}</div>
             <div id="heading">Question ?</div>
             <div id="question">

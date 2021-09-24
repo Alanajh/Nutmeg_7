@@ -24,7 +24,7 @@ class TestUL extends Component {
         };
     }
     render() {
-       return  <div className="belt" id="mainBelt">
+       return  <div /* className="belt" id="mainBelt" */>
         { this.state.testScreen ? <MainMenu/> : <Scores/>}
         
     </div>

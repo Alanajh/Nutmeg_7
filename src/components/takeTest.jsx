@@ -15,6 +15,9 @@ import law from '../json/3_test-SocialScience-Law.json';
 import testQuestionsList from '../json/testListQuestions.json';
 import Scores from './scores';
 
+//// TESTING NEW TEST PAGE ////
+import NewTT from '../components/MainMenu/new_TakeTest';
+
 class TakeTest extends Component {
     
     constructor(){
@@ -125,6 +128,7 @@ class TakeTest extends Component {
 
     render() {
        return  <div className="belt" id="mainBelt">
+           
            <div>{ this.state.menuScreen ? <Menu/> : null }</div>
            {/* REPLACE WITH END OF TEST SCRIPT OR SCORE SCREEN */}
            { this.state.scoreScreen ? <Scores len={testQuestionsList.length} right={this.state.right} score_Percentage={this.state.score_Percentage}/> : null }
