@@ -11,6 +11,8 @@ import '../css/testBody.css';
 import nutmegLogo from '../media/nutmeg-800x800.png';
 import Menu from '../components/MainMenu/mainMenuScreen';
 import law from '../json/3_test-SocialScience-Law.json';
+
+import testQuestionsList from '../json/testListQuestions.json';
 import Scores from './scores';
 
 class TakeTest extends Component {
@@ -56,23 +58,21 @@ class TakeTest extends Component {
         }
     }
     getNextQuestion = () => {
-        let qa = '';
         let answers = document.getElementsByName("answers");        
         let correctAnswer = law[this.state.target].answer;
         let verifiedAnswer = document.getElementById("verifiedAnswer");
         
-       if(this.state.questions + 1 === law.length + 1){
-        qa = 'Test Complete';
+       if(this.state.questions + 1 === testQuestionsList.length + 1){
         /////////////  test Score and Percentage %  ////////////
-            this.state.target = law.length;
-            this.state.score_Percentage = this.state.right/law.length * 100;
+        this.state.testQuestionsList.question = testQuestionsList.length;
+            //this.state.target = law.length;
+            this.state.score_Percentage = this.state.right/testQuestionsList.length * 100;
             this.setState({ questions: 0}); //restarts the test
             this.setState({ target:  0}); //restarts the test
             moveBtn.disabled = true;
             setTimeout(this.end_of_test, 1000);
         }else{ 
             /////// ACTIVE TEST ////////
-            qa = law[this.state.target].target[0].question;
             
             ////// Check for at least one selected option //////
             if(answers[0].checked === false &&
@@ -127,22 +127,22 @@ class TakeTest extends Component {
        return  <div className="belt" id="mainBelt">
            <div>{ this.state.menuScreen ? <Menu/> : null }</div>
            {/* REPLACE WITH END OF TEST SCRIPT OR SCORE SCREEN */}
-           { this.state.scoreScreen ? <Scores len={law.length} right={this.state.right} score_Percentage={this.state.score_Percentage}/> : null }
+           { this.state.scoreScreen ? <Scores len={testQuestionsList.length} right={this.state.right} score_Percentage={this.state.score_Percentage}/> : null }
           <div id="mainTestBoard">
            <Container fluid>
                 <Row>
                     <Col><img src={nutmegLogo} id="logo" alt="logo" ></img></Col>
                     <Col id="appName" xs={8}><h3>N * U * T * M * E * G</h3></Col>
-                    <Col id="score">{this.state.questions}/{law.length}</Col>
+                    <Col id="score">{this.state.questions}/{testQuestionsList.length}</Col>
                 </Row>
                 <Row id="currentTestTitle">
                     <Col id="c"></Col>
-                    <Col id="c" xs={12}>{law[this.state.target].title}</Col>
+                    <Col id="c" xs={12}>{testQuestionsList}</Col>
                     <Col id="c"></Col>
                 </Row>
                 <Row id="currentTestQuestion">
                     <Col id="c"></Col>
-                    <Col id="c" xs={8}>{law[this.state.target].target[0].question}</Col>
+                    <Col id="c" xs={8}>{testQuestionsList[0].question}</Col>
                     <Col id="c"></Col>
                 </Row>
                 <Row id="currentTest">

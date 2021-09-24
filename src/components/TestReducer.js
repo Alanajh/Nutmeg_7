@@ -2,7 +2,7 @@ import { React, Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/testComp.css';
-import test_titles from '../json/testing_test_titles.json';
+//import test_titles from '../json/testing_test_titles.json';
 import Test from '../components/testComp';
 import TakeTest from './takeTest';
 
@@ -16,12 +16,12 @@ import { BiSort } from 'react-icons/bi'
   });
 */
 
-const findTest = test_titles
+const findTest = TestQuestionList
 .filter( item => item.value === 1)
 .map( item => 
     <p>{item.title}</p>
 ) 
-const testTitleData = test_titles.map((item, index, arr) => (
+const testTitleData = TestQuestionList.map((item, index, arr) => (
     <p>{item.title}</p>
 ));
 
@@ -50,7 +50,7 @@ export class TestTitles extends Component {
     }
     // selects and filters the test based on the json value that equals the index of the clicked test
     selectTest = (index, e) => {
-       return  console.log(test_titles
+       return  console.log(TestQuestionList
             .filter( item => item.value === index)
             .map( item => 
                 console.log(item)
@@ -70,7 +70,11 @@ export class TestTitles extends Component {
 
     // takes the selectTest and presents the correct title
     target = (identifier, i) => {
-        console.log(i.test_id)
+       // console.log(i.test_id)
+       this.setState({ turnOnTest: true })
+        return console.log(i.questions.map(data => {
+            return data.question
+        }));
     }
 
     render() {
@@ -90,7 +94,14 @@ export class TestTitles extends Component {
                 </Row> 
             </Container> 
             
-           {/*  {testTitleData} */}
+            {TestQuestionList.map((item, index) => {
+                return (<Test 
+                    key={item.test_id}
+                    id={index} 
+                    identifier={item.genre}
+                    selectCurrent={this.target.bind(this, index, item)}
+                    >{item.title}</Test>)
+            })}
            </div>
         </div>
      }

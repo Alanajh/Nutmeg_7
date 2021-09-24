@@ -1,21 +1,19 @@
+
+
 [
     {
-        "title": "Events That Shaped A Presidency",
+        "title": "Events That Shaped The U.S. Presidency",
         "test_id": 9,
         "genre": "United States History",
         "genreId": "US",
         "head": "History",
         "questions":[
             {
-                "target": [
-                    {
-                        "question": "Theodore Roosevelt",
-                        "option_1": "Creator of The League of Nation",
-                        "option_2": "Civil Rights Movement",
-                        "option_3": "The Square Deal",
-                        "option_4": "The New Deal"
-                    }
-                ],
+                "question": "Theodore Roosevelt",
+                "option_1": "Creator of The League of Nation",
+                "option_2": "Civil Rights Movement",
+                "option_3": "The Square Deal",
+                "option_4": "The New Deal",
                 "answer": "The Square Deal",
                 "img": "./media/theodore_roosevelt_1.jpg",
                 "points": 34,
@@ -24,16 +22,11 @@
                 "hint_3": "The leader of the Progressive movement with a shapely plan."
             },
             {
-                "test_id": 2,
-                "target": [
-                    {
-                        "question": "George W. Bush",
-                        "option_1": "Creation of HUD",
-                        "option_2": "Halt student loan interest",
-                        "option_3": "First female president",
-                        "option_4": "911"
-                    }
-                ],
+                "question": "George W. Bush",
+                "option_1": "Creation of HUD",
+                "option_2": "Halt student loan interest",
+                "option_3": "First female president",
+                "option_4": "911",
                 "answer": "911",
                 "img": "",
                 "points": 34,
@@ -42,16 +35,11 @@
                 "hint_3": "The North and South Towers of The World Trade Center"
             },
             {
-                "test_id": 3,
-                "target": [
-                    {
-                        "question": "Donald Trump",
-                        "option_1": "",
-                        "option_2": "Passed The Prohibition Act",
-                        "option_3": "Cured Bird Flu",
-                        "option_4": "Halt Student Loans"
-                    }
-                ],
+                "question": "Donald Trump",
+                "option_1": "",
+                "option_2": "Passed The Prohibition Act",
+                "option_3": "Cured Bird Flu",
+                "option_4": "Halt Student Loans",
                 "answer": "Halt Student Loans",
                 "img": "",
                 "points": 34,
@@ -60,16 +48,11 @@
                 "hint_3": "The North and South Towers of The World Trade Center"
             },
             {
-                "test_id": 4,
-                "target": [
-                    {
-                        "question": "Barack Obama",
-                        "option_1": "Signed the Turkish Peace Treaty",
-                        "option_2": "Created The Affordable Care Act",
-                        "option_3": "Closed Guantanamo Bay",
-                        "option_4": "Abolished Restrictions on Medical Research and the Right to Choose"
-                    }
-                ],
+                "question": "Barack Obama",
+                "option_1": "Signed the Turkish Peace Treaty",
+                "option_2": "Created The Affordable Care Act",
+                "option_3": "Closed Guantanamo Bay",
+                "option_4": "Abolished Restrictions on Medical Research and the Right to Choose",
                 "answer": "Created The Affordable Care Act",
                 "img": "",
                 "points": 34,
@@ -87,24 +70,71 @@
         "head": "Religion",
         "questions":[
             {
-                "target": [
-                    {
-                        "question": "",
-                        "option_1": "Little Women",
-                    "option_2": "Jane Eyre",
-                    "option_3": "Pride and",
-                    "option_4": "To Kill A Mockingbird"
-                }
-            ],
-            "answer": "To Kill A Mockingbird",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }
-       ]
-            
+                "question": "The Greek goddess of wisdom, courage, civilization, law and justice. Born from Zeus's forehead. Her symbol is the olive tree and her sacred animal is the owl.",
+                "option_1": "Athena",
+                "option_2": "Demeter",
+                "option_3": "Hesius",
+                "option_4": "Artemis",
+                "answer": "Athena",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "The Greek goddess of wisdom, courage, civilization, law and justice. Born from Zeus's forehead. Her symbol is the olive tree and her sacred animal is the owl.",
+                "option_1": "Athena",
+                "option_2": "Demeter",
+                "option_3": "Hesius",
+                "option_4": "Artemis",
+                "answer": "Athena",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "The Greek goddess of wisdom, courage, civilization, law and justice. Born from Zeus's forehead. Her symbol is the olive tree and her sacred animal is the owl.",
+                "option_1": "Athena",
+                "option_2": "Demeter",
+                "option_3": "Hesius",
+                "option_4": "Artemis",
+                "answer": "Athena",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "The Greek goddess of wisdom, courage, civilization, law and justice. Born from Zeus's forehead. Her symbol is the olive tree and her sacred animal is the owl.",
+                "option_1": "Athena",
+                "option_2": "Demeter",
+                "option_3": "Hesius",
+                "option_4": "Artemis",
+                "answer": "Athena",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "The Greek goddess of wisdom, courage, civilization, law and justice. Born from Zeus's forehead. Her symbol is the olive tree and her sacred animal is the owl.",
+                "option_1": "Athena",
+                "option_2": "Demeter",
+                "option_3": "Hesius",
+                "option_4": "Artemis",
+                "answer": "Athena",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }
+        ]
     },
     {
         "title": "Famous Characters from Famous Books",
@@ -114,40 +144,31 @@
         "head": "Literature",
         "questions": [
             {
-            "target": [
-                {
-                    "question": "Jean Louis 'Scout' Finch",
-                    "option_1": "Little Women",
-                    "option_2": "Jane Eyre",
-                    "option_3": "Pride and",
-                    "option_4": "To Kill A Mockingbird"
-                }
-            ],
-            "answer": "To Kill A Mockingbird",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        },
-        {
-            "target": [
-                {
-                    "question": "Holden Caufield",
-                    "option_1": "Things Fall Apart",
-                    "option_2": "The Catcher in the Rye",
-                    "option_3": "Giovannis Room",
-                    "option_4": ""
-                }
-            ],
-            "answer": "The Catcher in the Rye",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        },
-        {
+                "question": "Jean Louis 'Scout' Finch",
+                "option_1": "Little Women",
+                "option_2": "Jane Eyre",
+                "option_3": "Pride and",
+                "option_4": "To Kill A Mockingbird",
+                "answer": "To Kill A Mockingbird",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "Holden Caufield",
+                "option_1": "Things Fall Apart",
+                "option_2": "The Catcher in the Rye",
+                "option_3": "Giovannis Room",
+                "answer": "The Catcher in the Rye",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
             "target": [
                 {
                     "question": "Scarlett O'Hara",
@@ -165,15 +186,11 @@
             "hint_3": ""
         },
         {
-            "target": [
-                {
-                    "question": "Miss Havisham",
-                    "option_1": "Great Expectations",
-                    "option_2": "The Stranger",
-                    "option_3": "1984",
-                    "option_4": "Little Women"
-                }
-            ],
+            "question": "Miss Havisham",
+            "option_1": "Great Expectations",
+            "option_2": "The Stranger",
+            "option_3": "1984",
+            "option_4": "Little Women",
             "answer": "Great Expectations",
             "img": "",
             "points": 34,
@@ -182,15 +199,11 @@
             "hint_3": ""
         },
         {
-            "target": [
-                {
-                    "question": "Patrick Bateman",
-                    "option_1": "The Picture of Dorian Gray",
-                    "option_2": "American Psycho",
-                    "option_3": "War of the Worlds",
-                    "option_4": "Animal Farm"
-                }
-            ],
+            "question": "Patrick Bateman",
+            "option_1": "The Picture of Dorian Gray",
+            "option_2": "American Psycho",
+            "option_3": "War of the Worlds",
+            "option_4": "Animal Farm",
             "answer": "American Psycho",
             "img": "",
             "points": 34,
@@ -796,7 +809,7 @@
     },
     {
         "title": "Flags of Europe",
-        "test_id": 6,
+        "test_id": 60,
         "genre": "Geography",
         "genreId": "Flags",
         "head": "History & Geography",
@@ -892,7 +905,7 @@
     },
     {
         "title": "Music of the 90s",
-        "test_id": 6,
+        "test_id": 61,
         "genre": "Popular Muisc",
         "genreId": "Music History",
         "head": "Arts & Recreation",
