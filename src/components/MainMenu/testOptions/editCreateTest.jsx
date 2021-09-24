@@ -31,9 +31,7 @@ class EditCreateTests extends Component {
 
   }
   closeEverything = () => {
-    const groupTestBtns = document.getElementById('group_TestBtns');
     const menuBtn = document.getElementById('menuBtn');
-    groupTestBtns.remove();
     menuBtn.remove();
     this.setState({ createComponent: false });
     this.setState({ testScreenList: false });

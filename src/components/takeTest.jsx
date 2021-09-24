@@ -10,7 +10,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/testBody.css'; 
 import nutmegLogo from '../media/nutmeg-800x800.png';
 import Menu from '../components/MainMenu/mainMenuScreen';
-import law from '../json/001_Federal_Law.json';
+import law from '../json/3_test-SocialScience-Law.json';
+
+import testQuestionsList from '../json/testListQuestions.json';
+import Scores from './scores';
 
 //// TESTING NEW TEST PAGE ////
 import NewTT from '../components/MainMenu/new_TakeTest';
@@ -37,23 +40,16 @@ class TakeTest extends Component {
             x: false,
         };
     }
-   
     //////  Place selection in verified sections //////
     answers = () => {
         let answers = document.getElementsByName("answers");
         let verifiedAnswer = document.getElementById("verifiedAnswer");
-        let correctAnswer = law[this.state.target].answer;
 
         if(answers[0].checked){ verifiedAnswer.innerHTML = law[this.state.target].target[0].option_1; }
         else if(answers[1].checked){ verifiedAnswer.innerHTML = law[this.state.target].target[0].option_2; }
         else if(answers[2].checked){ verifiedAnswer.innerHTML = law[this.state.target].target[0].option_3; }
         else if(answers[3].checked){ verifiedAnswer.innerHTML = law[this.state.target].target[0].option_4; }
         
-        if(correctAnswer === verifiedAnswer.innerHTML){
-           
-        }else{
-            
-        }
     }
     getMenu = () => { 
         let mainTestBoard = document.getElementById('mainTestBoard');
@@ -65,30 +61,21 @@ class TakeTest extends Component {
         }
     }
     getNextQuestion = () => {
-        let qa = '';
-        let answers = document.getElementsByName("answers");
-        let verifiedAnswer = document.getElementById("verifiedAnswer");
+        let answers = document.getElementsByName("answers");        
         let correctAnswer = law[this.state.target].answer;
+        let verifiedAnswer = document.getElementById("verifiedAnswer");
         
-       if(this.state.questions + 1 === law.length + 1){
-        qa = 'Test Complete';
+       if(this.state.questions + 1 === testQuestionsList.length + 1){
         /////////////  test Score and Percentage %  ////////////
-            this.state.target = law.length;
-            this.state.score_Percentage = this.state.right/law.length * 100;
-            document.getElementById('q').innerHTML = qa;
+        this.state.testQuestionsList.question = testQuestionsList.length;
+            //this.state.target = law.length;
+            this.state.score_Percentage = this.state.right/testQuestionsList.length * 100;
             this.setState({ questions: 0}); //restarts the test
             this.setState({ target:  0}); //restarts the test
             moveBtn.disabled = true;
             setTimeout(this.end_of_test, 1000);
         }else{ 
             /////// ACTIVE TEST ////////
-            qa = law[this.state.target].target[0].question;
-
-            ////// Place selected option on the preview line ////////
-            /* if(answers[0].checked){ verifiedAnswer.innerHTML = law[this.state.target].target[0].option_1; }
-            else if(answers[1].checked){ verifiedAnswer.innerHTML = law[this.state.target].target[0].option_2; }
-            else if(answers[2].checked){ verifiedAnswer.innerHTML = law[this.state.target].target[0].option_3; }
-            else if(answers[3].checked){ verifiedAnswer.innerHTML = law[this.state.target].target[0].option_4; } */
             
             ////// Check for at least one selected option //////
             if(answers[0].checked === false &&
@@ -106,6 +93,8 @@ class TakeTest extends Component {
                 this.setState({ questions: this.state.questions + 1});
                 this.setState({ option_1: this.state.option_1 + 1 });
                 this.setState({ target: this.state.target + 1}); 
+               
+                
                 if(correctAnswer === verifiedAnswer.innerHTML){
                     this.setState({ right: this.state.right + 1});
                 }else{
@@ -128,9 +117,9 @@ class TakeTest extends Component {
         moveBtn.innerHTML = "Exit";
        
         this.setState({ scoreScreen: true});
-
-        let testPg =  document.getElementById('testPg');
-        testPg.remove();
+ 
+        let testPg =  document.getElementById('mainTestBoard');
+        testPg.remove(); 
     }
     warning = () => {
         let selectionWarning = document.getElementById('selectionWarning');
@@ -142,39 +131,36 @@ class TakeTest extends Component {
            
            <div>{ this.state.menuScreen ? <Menu/> : null }</div>
            {/* REPLACE WITH END OF TEST SCRIPT OR SCORE SCREEN */}
-{/*            { this.state.scoreScreen ? <Scores len={law.length} right={this.state.right} score_Percentage={this.state.score_Percentage}/> : null }
- */}          <div id="mainTestBoard">
+           { this.state.scoreScreen ? <Scores len={testQuestionsList.length} right={this.state.right} score_Percentage={this.state.score_Percentage}/> : null }
+          <div id="mainTestBoard">
            <Container fluid>
                 <Row>
                     <Col><img src={nutmegLogo} id="logo" alt="logo" ></img></Col>
                     <Col id="appName" xs={8}><h3>N * U * T * M * E * G</h3></Col>
-                    <Col id="score">{this.state.questions}/{law.length}</Col>
+                    <Col id="score">{this.state.questions}/{testQuestionsList.length}</Col>
                 </Row>
                 <Row id="currentTestTitle">
                     <Col id="c"></Col>
-                    <Col id="c" xs={12}>{law[this.state.target].title}</Col>
+                    <Col id="c" xs={12}>{testQuestionsList}</Col>
                     <Col id="c"></Col>
                 </Row>
                 <Row id="currentTestQuestion">
                     <Col id="c"></Col>
-                    <Col id="c" xs={8}>{law[this.state.target].target[0].question}</Col>
+                    <Col id="c" xs={8}>{testQuestionsList[0].question}</Col>
                     <Col id="c"></Col>
                 </Row>
                 <Row id="currentTest">
                     <Col id="c"></Col>
                     <Col id="c" xs={8}>
-                    <ul id="testOptions">
-                        <li id="q"></li>
                         <div id="unorderedList">
-                            <li key="1"/><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/> {law[this.state.target].target[0].option_1}
-                            <li key="2"/><input type="radio" id="choice2" name="answers" value="choice2" onClick={this.answers}/> {law[this.state.target].target[0].option_2}
-                            <li key="3"/><input type="radio" id="choice3" name="answers" value="choice3" onClick={this.answers}/> {law[this.state.target].target[0].option_3}
-                            <li key="4"/><input type="radio" id="choice4" name="answers" value="choice4" onClick={this.answers}/> {law[this.state.target].target[0].option_4}
+                            <p key="1"/><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/> {law[this.state.target].target[0].option_1}
+                            <p key="2"/><input type="radio" id="choice2" name="answers" value="choice2" onClick={this.answers}/> {law[this.state.target].target[0].option_2}
+                            <p key="3"/><input type="radio" id="choice3" name="answers" value="choice3" onClick={this.answers}/> {law[this.state.target].target[0].option_3}
+                            <p key="4"/><input type="radio" id="choice4" name="answers" value="choice4" onClick={this.answers}/> {law[this.state.target].target[0].option_4}
                         </div>
                         <div id="verifiedAnswer">__________________________</div>
                       
                         {/* <li>Time / Settings</li> */}
-                    </ul>
                     </Col>
                     <Col id="c"></Col>
                 </Row>

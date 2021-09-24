@@ -2,9 +2,11 @@ import { React, Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/testComp.css';
-import test_titles from '../json/testing_test_titles.json';
+//import test_titles from '../json/testing_test_titles.json';
 import Test from '../components/testComp';
 import TakeTest from './takeTest';
+
+import TestQuestionList from '../json/testListQuestions.json'
 
 import { IoFilterSharp } from 'react-icons/io5';
 import { BiSort } from 'react-icons/bi'
@@ -14,12 +16,12 @@ import { BiSort } from 'react-icons/bi'
   });
 */
 
-const findTest = test_titles
+const findTest = TestQuestionList
 .filter( item => item.value === 1)
 .map( item => 
     <p>{item.title}</p>
 ) 
-const testTitleData = test_titles.map((item, index, arr) => (
+const testTitleData = TestQuestionList.map((item, index, arr) => (
     <p>{item.title}</p>
 ));
 
@@ -43,37 +45,38 @@ export class TestTitles extends Component {
         }
     }
 
+    tryA = () => {
+
+    }
     // selects and filters the test based on the json value that equals the index of the clicked test
     selectTest = (index, e) => {
-       return  console.log(test_titles
+       return  console.log(TestQuestionList
             .filter( item => item.value === index)
             .map( item => 
-                item
+                console.log(item)
             ) )
     }
     testTitleDataSorted = () => {
         if(this.state.sorted === false) {
+            this.setState({ sorted: true});
+            return TestQuestionList;
            // return test_titles.
-            //this.setState({ sorted: true});
+            
         }else{
-            //this.setState({ sorted: false});
+            this.setState({ sorted: false});
+            return TestQuestionList = TestQuestionList.sort();
         }
     }
+
     // takes the selectTest and presents the correct title
-    target = (selectTest) => {
-        let completeList = document.getElementById('completeList');
-        test_titles.filter( item => item.value === selectTest)
-        if(selectTest === 1){
-            completeList.remove();
-            this.setState({ turnOnTest: true})    
-        }
-    }
-    goopta = () => {
-        console.log(test_titles.map(item => {
-            return item.title
+    target = (identifier, i) => {
+       // console.log(i.test_id)
+       this.setState({ turnOnTest: true })
+        return console.log(i.questions.map(data => {
+            return data.question
         }));
-        
     }
+
     render() {
         return   <div>
             <div>{this.state.turnOnTest ? <TakeTest/> : null }</div>
@@ -90,15 +93,16 @@ export class TestTitles extends Component {
                     </Col>
                 </Row> 
             </Container> 
-            {test_titles.map((item, index) => {
-                return (<Test/*  
-                    key={test_titles.value}
+            
+            {TestQuestionList.map((item, index) => {
+                return (<Test 
+                    key={item.test_id}
                     id={index} 
-                    identifier={item.genre}*/
-                    selectCurrent={this.target.bind(this, index)} 
+                    identifier={item.genre}
+                    selectCurrent={this.target.bind(this, index, item)}
+
                     >{item.title}</Test>)
             })}
-           {/*  {testTitleData} */}
            </div>
         </div>
      }
@@ -106,6 +110,7 @@ export class TestTitles extends Component {
 export class TestGenres extends Component { 
     render() {
         return   <div>
+            
        {/*  {testGenreData} */}
     </div>
      }

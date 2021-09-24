@@ -1,7 +1,10 @@
 [
     {
         "title": "Famous Characters from Famous Books",
-        "test_id": 800,
+        "test_id": 8,
+        "genre": "Classic Literature",
+        "genreId": "Classics",
+        "head": "Literature",
         "target": [
             {
                 "question": "Jean Louis 'Scout' Finch",

@@ -1,7 +1,10 @@
 [
     {
         "title": "Greek Mythology",
-        "test_id": 1,
+        "test_id": 2,
+        "genre": "Greek Mythology",
+        "genreId": "Mythology",
+        "head": "Religion",
         "target": [
             {
                 "question": "",

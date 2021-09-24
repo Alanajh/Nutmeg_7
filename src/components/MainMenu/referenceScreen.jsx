@@ -23,8 +23,6 @@ class Reference extends Component {
     }
     getDefinition = () => {
         let word = document.getElementById('word').value;
-        let stack = [];
-
         
         fetch('https://www.dictionaryapi.com/api/v3/references/collegiate/json/' + word + '?key=c49f5474-fb60-46fb-8354-f39553264c15')
         .then(response => {return response.json();})
