@@ -18,8 +18,8 @@ class EditCreateTests extends Component {
   }
 
   listBtn = () => {
-    const groupTestBtns = document.getElementById('group_TestBtns');
-    groupTestBtns.remove();
+   let groupTestBtns = document.getElementById('group_TestBtns');
+    groupTestBtns.hidden = true;
     this.setState({ testScreenList: true });
     this.setState({ createComponent: false });
   }
@@ -32,7 +32,9 @@ class EditCreateTests extends Component {
   }
   closeEverything = () => {
     const menuBtn = document.getElementById('menuBtn');
-    menuBtn.remove();
+    const groupTestBtns = document.getElementById('group_TestBtns');
+    groupTestBtns.dden= true;
+    menuBtn.hidden = true;
     this.setState({ createComponent: false });
     this.setState({ testScreenList: false });
     this.setState({ testScreen: true });
