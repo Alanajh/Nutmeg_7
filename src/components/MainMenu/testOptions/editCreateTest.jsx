@@ -16,9 +16,6 @@ class EditCreateTests extends Component {
         value: 'list'
     };
   }
-  grpBtns = () => {
-    
-  }
 
   listBtn = () => {
    let groupTestBtns = document.getElementById('group_TestBtns');

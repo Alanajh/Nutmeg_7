@@ -14,6 +14,9 @@ import Menu from '../components/MainMenu/mainMenuScreen';
 import testQuestionsList from '../json/testListQuestions.json';
 import { Test } from './testComp';
 
+//// TESTING NEW TEST PAGE ////
+import NewTT from '../components/MainMenu/new_TakeTest';
+
 class TakeTest extends Component {
     
     constructor(){
@@ -127,6 +130,7 @@ class TakeTest extends Component {
 
     render() {
        return  <div className="belt" id="mainBelt">
+           
            <div>{ this.state.menuScreen ? <Menu/> : null }</div>
            {/* REPLACE WITH END OF TEST SCRIPT OR SCORE SCREEN */}
           {/*  { this.state.scoreScreen ? <Scores len={testQuestionsList[this.state.target].questions.length} right={this.state.right} score_Percentage={this.state.score_Percentage}/> : null }
