@@ -14,8 +14,7 @@ import Menu from '../components/MainMenu/mainMenuScreen';
 import testQuestionsList from '../json/testListQuestions.json';
 import { Test } from './testComp';
 
-//// TESTING NEW TEST PAGE ////
-import NewTT from '../components/MainMenu/new_TakeTest';
+
 
 class TakeTest extends Component {
     

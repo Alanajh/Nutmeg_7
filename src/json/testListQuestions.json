@@ -1384,6 +1384,7 @@
         "genre": "Conspiracies",
         "genreId": "Military Conspiracies",
         "head": "General Studies",
+        "media_type": 0,
         "questions":[
             {
                 "question": "",
@@ -1405,6 +1406,7 @@
         "genre": "Sign Language",
         "genreId": "Learning Sign Language",
         "head": "Language",
+        "media_type": 0,
         "questions":[
             {
                 "question": "",
@@ -1412,6 +1414,41 @@
                 "option_2": "",
                 "option_3": "",
                 "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
+    },
+    {
+        "title": "Our Solar System",
+        "test_id": 523,
+        "genre": "Solar System",
+        "genreId": "Space",
+        "head": "Astronomy",
+        "media_type": 0,
+        "questions":[
+            {
+                "question": "How many moons does earth have?",
+                "option_1": "One",
+                "option_2": "Three",
+                "option_3": "Two",
+                "option_4": "Nine",
+                "answer": "One",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "How long does it take for the Earth to orbit the sun?",
+                "option_1": "One day",
+                "option_2": "Two weeks",
+                "option_3": "One month",
+                "option_4": "One year",
                 "answer": "",
                 "img": "",
                 "points": 34,

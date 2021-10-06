@@ -70,20 +70,19 @@ export class TestTitles extends Component {
     target = (identifier, i) => {
     //console.log(i.title)
     let testListScreen = document.getElementById("completeList");
-    
+    document.getElementById("testTitleSelected").innerHTML = i.title;
        if(i.media_type === 0){
            this.setState({ selectedTestData: true });
            console.log("Regular Test");
+           document.getElementById("testTitleSelected").innerHTML = i.title
            testListScreen.hidden = true;
-           document.getElementById("testList").innerHTML = i.title;
-           //testList.innerHTML = i.title;
            this.setState({ turnOnTest: true });
        }else{
            console.log("Media Test");
+           testListScreen.hidden = true;
+           document.getElementById("testTitleSelected").innerHTML = i.title
+           this.setState({ turnOnTest: true });
        }
-       /*  return console.log(i.questions.map(data => {
-            return data.question
-        })); */
     }
 
     render() {
@@ -93,12 +92,12 @@ export class TestTitles extends Component {
             <div>
                 <Row>
                     <Col xs={2}></Col>
-                    <Col xs={8} style={{textAlign: 'center' }} id="testList"></Col>
+                    <Col xs={8} style={{textAlign: 'center' }} id="testTitleSelected"></Col>
                     <Col xs={2}></Col>
                 </Row>
                 <Row>
                     <Col xs={2}></Col>
-                    
+                    <Col xs={8} style={{textAlign: 'center' }} id="testQuestions"></Col>
                     <Col xs={2}></Col>
                 </Row>
             </div>
