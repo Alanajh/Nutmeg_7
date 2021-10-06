@@ -1,5 +1,3 @@
-
-
 [
     {
         "title": "Events That Shaped The U.S. Presidency",
@@ -7,6 +5,7 @@
         "genre": "United States History",
         "genreId": "US",
         "head": "History",
+        "media_type": 0,
         "questions":[
             {
                 "question": "Theodore Roosevelt",
@@ -68,6 +67,7 @@
         "genre": "Greek Mythology",
         "genreId": "Mythology",
         "head": "Religion",
+        "media_type": 0,
         "questions":[
             {
                 "question": "The Greek goddess of wisdom, courage, civilization, law and justice. Born from Zeus's forehead. Her symbol is the olive tree and her sacred animal is the owl.",
@@ -142,6 +142,7 @@
         "genre": "Classic Literature",
         "genreId": "Classics",
         "head": "Literature",
+        "media_type": 0,
         "questions": [
             {
                 "question": "Jean Louis 'Scout' Finch",
@@ -380,25 +381,21 @@
         }
 
         ]
-    },
-    
+    },   
     {
         "title": "United States Landmark Supreme Court Cases",
         "test_id": 3,
         "genre": "Legal History",
         "genreId": "Law",
         "head": "SocialScience",
+        "media_type": 0,
         "questions": [
             {
-                "target": [
-                    {
-                        "question": "Brown v. board of Education.",
-                        "option_1": "Prayer in Schools",
-                        "option_2": "Separate But Equal",
-                        "option_3": "Teachers right to discipline children.",
-                        "option_4": "Required standardized testing for all students."
-                    }
-                ],
+                "question": "Brown v. board of Education.",
+                "option_1": "Prayer in Schools",
+                "option_2": "Separate But Equal",
+                "option_3": "Teachers right to discipline children.",
+                "option_4": "Required standardized testing for all students.",
                 "answer": "Separate But Equal",
                 "img": "",
                 "points": 34,
@@ -407,15 +404,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Plessy v. Ferguson",
-                        "option_1": "Enforcement of Jim Crow laws.",
-                        "option_2": "State-mandated segregation laws did not violate the equal protection clause of the fourth amendment.",
-                        "option_3": "Black barbers cannot tend to white customers.",
-                        "option_4": "Segregated bus seating."
-                    }
-                ],
+                "question": "Plessy v. Ferguson",
+                "option_1": "Enforcement of Jim Crow laws.",
+                "option_2": "State-mandated segregation laws did not violate the equal protection clause of the fourth amendment.",
+                "option_3": "Black barbers cannot tend to white customers.",
+                "option_4": "Segregated bus seating.",
                 "answer": "State-mandated segregation laws did not violate the equal protection clause of the fourth amendment.",
                 "img": "",
                 "points": 34,
@@ -424,15 +417,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Gibbons v. Ogden",
-                        "option_1": "When a federal and state law are in conflict, the federal law is supreme.",
-                        "option_2": "Businesses must pay income tax as they earn and receive income, and then file a tax return at the end of the year.",
-                        "option_3": "Companies that have employees are expected to pay taxes related to having staff on their payroll. These include Social Security and Medicare taxes, federal income tax withholding, and federal unemployment tax.",
-                        "option_4": "Makes it agains the law to discuss prices with competitors—even if it affects a small marketplace."
-                    }
-                ],
+                "question": "Gibbons v. Ogden",
+                "option_1": "When a federal and state law are in conflict, the federal law is supreme.",
+                "option_2": "Businesses must pay income tax as they earn and receive income, and then file a tax return at the end of the year.",
+                "option_3": "Companies that have employees are expected to pay taxes related to having staff on their payroll. These include Social Security and Medicare taxes, federal income tax withholding, and federal unemployment tax.",
+                "option_4": "Makes it agains the law to discuss prices with competitors—even if it affects a small marketplace.",
                 "answer": "When a federal and state law are in conflict, the federal law is supreme.",
                 "img": "",
                 "points": 34,
@@ -441,15 +430,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Dred Scott v. Sandford",
-                        "option_1": "A runaway slave would be required to present documentation of freedom upon request.",
-                        "option_2": "The Constitution does not consider slaves to be U.S. citizens. Rather, they are constitutionally protected property of their masters.",
-                        "option_3": " federal law that guaranteed workers the right to organize and choose their own union leaders without company interference.",
-                        "option_4": "required all private companies that won contracts on any significant public-works construction projects to pay workers the so-called 'prevailings' wage."
-                    }
-                ],
+                "question": "Dred Scott v. Sandford",
+                "option_1": "A runaway slave would be required to present documentation of freedom upon request.",
+                "option_2": "The Constitution does not consider slaves to be U.S. citizens. Rather, they are constitutionally protected property of their masters.",
+                "option_3": " federal law that guaranteed workers the right to organize and choose their own union leaders without company interference.",
+                "option_4": "required all private companies that won contracts on any significant public-works construction projects to pay workers the so-called 'prevailings' wage.",
                 "answer": "The Constitution does not consider slaves to be U.S. citizens. Rather, they are constitutionally protected property of their masters.",
                 "img": "",
                 "points": 34,
@@ -458,15 +443,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Schenck v. United States",
-                        "option_1": "It also prevented companies from firing workers for joining a union and outlawed so-called yellow-dog contracts, which required prospective employees to sign a promise not to join a union.",
-                        "option_2": "Guaranteed an eight-hour workday, a minimum wage, a 40-hour work week, and time-and-a-half overtime.",
-                        "option_3": "Speech that presents a “clear and present danger” to the security of the United States is in violation of the principle of free speech as protected by the First Amendment to the Constitution.",
-                        "option_4": "Intended to protect against arbitrary arrests as well as against unreasonable searches."
-                    }
-                ],
+                "question": "Schenck v. United States",
+                "option_1": "It also prevented companies from firing workers for joining a union and outlawed so-called yellow-dog contracts, which required prospective employees to sign a promise not to join a union.",
+                "option_2": "Guaranteed an eight-hour workday, a minimum wage, a 40-hour work week, and time-and-a-half overtime.",
+                "option_3": "Speech that presents a “clear and present danger” to the security of the United States is in violation of the principle of free speech as protected by the First Amendment to the Constitution.",
+                "option_4": "Intended to protect against arbitrary arrests as well as against unreasonable searches.",
                 "answer": "Speech that presents a “clear and present danger” to the security of the United States is in violation of the principle of free speech as protected by the First Amendment to the Constitution.",
                 "img": "",
                 "points": 34,
@@ -475,15 +456,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Mapp v. Ohio",
-                        "option_1": "Established the right to counsel and a court-appointed attorney for defendants who can’t afford to hire their own lawyer.",
-                        "option_2": "Evidence that is illegally obtained by the state may not be used against a defendant in court.",
-                        "option_3": "It is explicitly the province and duty of the Judicial Department to say what the law is.",
-                        "option_4": "The Court held that it is the role of the federal government to regulate commerce and that state governments cannot develop their own commerce-regulating laws."
-                    }
-                ],
+                "question": "Mapp v. Ohio",
+                "option_1": "Established the right to counsel and a court-appointed attorney for defendants who can’t afford to hire their own lawyer.",
+                "option_2": "Evidence that is illegally obtained by the state may not be used against a defendant in court.",
+                "option_3": "It is explicitly the province and duty of the Judicial Department to say what the law is.",
+                "option_4": "The Court held that it is the role of the federal government to regulate commerce and that state governments cannot develop their own commerce-regulating laws.",
                 "answer": "Evidence that is illegally obtained by the state may not be used against a defendant in court.",
                 "img": "",
                 "points": 34,
@@ -492,15 +469,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Engel v. Vitale",
-                        "option_1": "It established the federal government’s implied powers over states.",
-                        "option_2": "Passed laws prohibiting anyone except Native Americans from living on Native American land.",
-                        "option_3": "A state can regulate private industries when it affects the public.",
-                        "option_4": "Public institutions (i.e., a school system) cannot require prayer."
-                    }
-                ],
+                "question": "Engel v. Vitale",
+                "option_1": "It established the federal government’s implied powers over states.",
+                "option_2": "Passed laws prohibiting anyone except Native Americans from living on Native American land.",
+                "option_3": "A state can regulate private industries when it affects the public.",
+                "option_4": "Public institutions (i.e., a school system) cannot require prayer.",
                 "answer": "Public institutions (i.e., a school system) cannot require prayer.",
                 "img": "",
                 "points": 34,
@@ -509,15 +482,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Miranda v. Arizona",
-                        "option_1": "Protection against illegal search and seizure.",
-                        "option_2": "You have the right to remain silent …",
-                        "option_3": "Established the right to due process.",
-                        "option_4": "Established law enforcements ability to do polygraph tests."
-                    }
-                ],
+                 "question": "Miranda v. Arizona",
+                "option_1": "Protection against illegal search and seizure.",
+                "option_2": "You have the right to remain silent …",
+                "option_3": "Established the right to due process.",
+                "option_4": "Established law enforcements ability to do polygraph tests.",
                 "answer": "You have the right to remain silent …",
                 "img": "",
                 "points": 34,
@@ -526,15 +495,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "San Antonio Independent School District v. Rodriguez",
-                        "option_1": "The Constitutional Right to Bear Arms.",
-                        "option_2": "The Constitution does not guarantee a fundamental right to education.",
-                        "option_3": "Established the Constitutional right to free speach.",
-                        "option_4": "Allowed states to utilize taxs dollars for religious educational institutions."
-                    }
-                ],
+                "question": "San Antonio Independent School District v. Rodriguez",
+                "option_1": "The Constitutional Right to Bear Arms.",
+                "option_2": "The Constitution does not guarantee a fundamental right to education.",
+                "option_3": "Established the Constitutional right to free speach.",
+                "option_4": "Allowed states to utilize taxs dollars for religious educational institutions.",
                 "answer": "The Constitution does not guarantee a fundamental right to education.",
                 "img": "",
                 "points": 34,
@@ -543,15 +508,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Roe v. Wade",
-                        "option_1": "The Constitutionally implied right to privacy protects a woman’s choice in matters of abortion.",
-                        "option_2": "Prohibits the mailing of unsolicited advertisements for contraceptives.",
-                        "option_3": "The health of the patient and the welfare of society may be promoted in certain cases by the sterilization of mental defectives, under careful safeguard, etc.",
-                        "option_4": "Makes it a crime (1) for any person to sell or distribute any contraceptive of any kind to a minor under 16."
-                    }
-                ],
+                "question": "Roe v. Wade",
+                "option_1": "The Constitutionally implied right to privacy protects a woman’s choice in matters of abortion.",
+                "option_2": "Prohibits the mailing of unsolicited advertisements for contraceptives.",
+                "option_3": "The health of the patient and the welfare of society may be promoted in certain cases by the sterilization of mental defectives, under careful safeguard, etc.",
+                "option_4": "Makes it a crime (1) for any person to sell or distribute any contraceptive of any kind to a minor under 16.",
                 "answer": "The Constitutionally implied right to privacy protects a woman’s choice in matters of abortion.",
                 "img": "",
                 "points": 34,
@@ -560,15 +521,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Hamer v. Campbell",
-                        "option_1": "It held that the Constitution requires that 'as nearly as is practicable one man's vote in a congressional election is to be worth as much as another's.",
-                        "option_2": "It argued that the right to vote in state elections is implicit and that it may not constitutionally be conditioned upon the payment of a tax or fee.",
-                        "option_3": "A Civil Rights case brought against the circuit clerk of Mississippi, for denying Black people the right to register and vote.",
-                        "option_4": "Granted the right of citizenship to African Americans."
-                    }
-                ],
+                "question": "Hamer v. Campbell",
+                "option_1": "It held that the Constitution requires that 'as nearly as is practicable one man's vote in a congressional election is to be worth as much as another's.",
+                "option_2": "It argued that the right to vote in state elections is implicit and that it may not constitutionally be conditioned upon the payment of a tax or fee.",
+                "option_3": "A Civil Rights case brought against the circuit clerk of Mississippi, for denying Black people the right to register and vote.",
+                "option_4": "Granted the right of citizenship to African Americans.",
                 "answer": "A Civil Rights case brought against the circuit clerk of Mississippi, for denying Black people the right to register and vote.",
                 "img": "",
                 "points": 34,
@@ -577,15 +534,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Tinker v. Des Moines",
-                        "option_1": "Claiming that prohibiting the sale of 'nonintoxicating' 3.2% beer to males under the age of 21 and to females under the age of 18 constituted a gender-based discrimination that denied to males 18-20 years of age the equal protection of the laws.",
-                        "option_2": "Made it illegal to encourage or prompt the processing of an abortion.",
-                        "option_3": "Allowed students their right to free speech in public schools, by wearing black armbands to symbolize anti-war political protest.",
-                        "option_4": "Requires every parent, guardian, or other person having control or charge or custody of a child between 8 and 16 years to send him to a public school. Failure so to do is declared a misdemeanor."
-                    }
-                ],
+                "question": "Tinker v. Des Moines",
+                "option_1": "Claiming that prohibiting the sale of 'nonintoxicating' 3.2% beer to males under the age of 21 and to females under the age of 18 constituted a gender-based discrimination that denied to males 18-20 years of age the equal protection of the laws.",
+                "option_2": "Made it illegal to encourage or prompt the processing of an abortion.",
+                "option_3": "Allowed students their right to free speech in public schools, by wearing black armbands to symbolize anti-war political protest.",
+                "option_4": "Requires every parent, guardian, or other person having control or charge or custody of a child between 8 and 16 years to send him to a public school. Failure so to do is declared a misdemeanor.",
                 "answer": "Allowed students their right to free speech in public schools, by wearing black armbands to symbolize anti-war political protest.",
                 "img": "",
                 "points": 34,
@@ -594,15 +547,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Loving v. Virginia",
-                        "option_1": "Laws banning interracial marriage violate the Equal Protection and Due Process Clauses of the Fourteenth Amendment to the U.S. Constitution.",
-                        "option_2": "The fundamental right to marry is guaranteed to same-sex couples by both the Due Process Clause and the Equal Protection Clause of the Fourteenth Amendment to the United States Constitution.",
-                        "option_3": "",
-                        "option_4": ""
-                    }
-                ],
+                "question": "Loving v. Virginia",
+                "option_1": "Laws banning interracial marriage violate the Equal Protection and Due Process Clauses of the Fourteenth Amendment to the U.S. Constitution.",
+                "option_2": "The fundamental right to marry is guaranteed to same-sex couples by both the Due Process Clause and the Equal Protection Clause of the Fourteenth Amendment to the United States Constitution.",
+                "option_3": "",
+                "option_4": "",
                 "answer": "Laws banning interracial marriage violate the Equal Protection and Due Process Clauses of the Fourteenth Amendment to the U.S. Constitution.",
                 "img": "",
                 "points": 34,
@@ -611,15 +560,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Regents of the U. of California v. Bakke",
-                        "option_1": "",
-                        "option_2": "A university's use of racial 'quotas' in its admissions process was unconstitutional.",
-                        "option_3": "",
-                        "option_4": ""
-                    }
-                ],
+                "question": "Regents of the U. of California v. Bakke",
+                "option_1": "",
+                "option_2": "A university's use of racial 'quotas' in its admissions process was unconstitutional.",
+                "option_3": "",
+                "option_4": "",
                 "answer":"A university's use of racial 'quotas' in its admissions process was unconstitutional.",
                 "img": "",
                 "points": 34,
@@ -628,15 +573,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Obergefell v. Hodges",
-                        "option_1": "",
-                        "option_2": "",
-                        "option_3": "",
-                        "option_4": "Laws banning interracial marriage violate the Equal Protection and Due Process Clauses of the Fourteenth Amendment to the U.S. Constitution."
-                    }
-                ],
+                "question": "Obergefell v. Hodges",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "Laws banning interracial marriage violate the Equal Protection and Due Process Clauses of the Fourteenth Amendment to the U.S. Constitution.",
                 "answer": "Laws banning interracial marriage violate the Equal Protection and Due Process Clauses of the Fourteenth Amendment to the U.S. Constitution.",
                 "img": "",
                 "points": 34,
@@ -645,15 +586,11 @@
                 "hint_3": ""
             },
             {
-                "target": [
-                    {
-                        "question": "Griswold v. Connecticut",
-                        "option_1": "",
-                        "option_2": "A state's ban on the use of contraceptives violated the right to marital privacy.",
-                        "option_3": "",
-                        "option_4": ""
-                    }
-                ],
+                "question": "Griswold v. Connecticut",
+                "option_1": "",
+                "option_2": "A state's ban on the use of contraceptives violated the right to marital privacy.",
+                "option_3": "",
+                "option_4": "",
                 "answer": "A state's ban on the use of contraceptives violated the right to marital privacy.",
                 "img": "",
                 "points": 34,
@@ -669,16 +606,78 @@
         "genre": "Medical History",
         "genreId": "Medicine",
         "head": "Applied Science",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
+        "media_type": 0,
+        "questions":[
+        {
+            "question": "Frederick Hopkins study led to a far better understanding of nutrients and helped to prevent many illnesses and conditions that resulted from deficiencies.",
+            "option_1": "Stethescope",
+            "option_2": "Vitamins",
+            "option_3": "Amputations",
+            "option_4": "Casting",
+            "answer": "Vitamins",
+            "img": "",
+            "points": 34,
+            "hint_1": "",
+            "hint_2": "",
+            "hint_3": ""
+        },{
+            "question": "Physician Ibn al-Nafis was the first to describe this, which led to a better understanding of the right sided or pulmonary movement of the human body",
+            "option_1": "The Respiratory System",
+            "option_2": "The Circulatory System",
+            "option_3": "The Cardiovascular System",
+            "option_4": "The Skeletal System",
+            "answer": "The Circulatory System",
+            "img": "",
+            "points": 34,
+            "hint_1": "",
+            "hint_2": "",
+            "hint_3": ""
+        },
+        {
+            "question": "Conrad Rontgen first discovered this technique in 1895 when he used it to create an image of his wifes hand.",
+            "option_1": "MRI or Magnetic Resonance Imaging",
+            "option_2": "CT, CAT or Computerized Tomography Scan",
+            "option_3": "Ultrasound",
+            "option_4": "X-ray ",
+            "answer": "",
+            "img": "",
+            "points": 34,
+            "hint_1": "",
+            "hint_2": "",
+            "hint_3": ""
+        },
+        {
+            "question": "Before this discovery by Frederick Banting, diabetes was a condition that would lead to a slow and unpleasant death. Today, thanks to this finding, most diabetic patients manage to live normal and full lives which has affected the lives of millions of people around the world.",
+            "option_1": "Insulin",
+            "option_2": "Urine Sample",
+            "option_3": "Anaesthetic",
+            "option_4": "Vaccination",
+            "answer": "Insulin",
+            "img": "",
+            "points": 34,
+            "hint_1": "",
+            "hint_2": "",
+            "hint_3": ""
+        },
+        {
+            "question": "Robert Gallo and Luc Montagnier lead to a greater awarenes of the dangers of unprotected sex ",
+            "option_1": "Osteoperosis",
+            "option_2": "Lou Gehrigs Disease",
+            "option_3": "Cell Therapy",
+            "option_4": "HIV",
+            "answer": "HIV",
+            "img": "",
+            "points": 34,
+            "hint_1": "",
+            "hint_2": "",
+            "hint_3": ""
+        },
+        {
+            "question": "",
+            "option_1": "",
+            "option_2": "",
+            "option_3": "",
+            "option_4": "",
             "answer": "",
             "img": "",
             "points": 34,
@@ -688,52 +687,271 @@
         }]
     },
     {
-        "title": "World Leaders and Their Parties",
+        "title": "World Leaders and Their Parties/Organizations",
         "test_id": 320,
         "genre": "Political History",
         "genreId": "Politics",
         "head": "Social Science",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "media_type": 0,
+        "questions":[
+            {
+                "question": "Leader of Indian Independence Movement",
+                "option_1": "Subhas Chandra Bose",
+                "option_2": "Narendra Modi",
+                "option_3": "Mahatma Gandhi",
+                "option_4": "Chandra Shekhar Azad",
+                "answer": "Mahatma Gandhi",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "Founder of the Persian(Achaemenid Empire",
+                "option_1": "Xerxes I",
+                "option_2": "Cyrus the Great",
+                "option_3": "Arsaces",
+                "option_4": "Tiberius Graachus",
+                "answer": "Cyrus the Great",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "The State of Qin - Qin Dynasty",
+                "option_1": "Qin Shi Huang",
+                "option_2": "Mao Zedong",
+                "option_3": "Li Si",
+                "option_4": "Meng Yi",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "Leader of the French Republic as First Consul from 1799 to 1804",
+                "option_1": "Charlemagne",
+                "option_2": "Louis IX",
+                "option_3": "Emmanuel Macron",
+                "option_4": "Napoléon Bonaparte",
+                "answer": "Napoléon Bonaparte",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "Supreme Allied Commander for the D-Day Invasion",
+                "option_1": "Sir Winston L. Churchill",
+                "option_2": "General Dwight D. Eisenhower",
+                "option_3": "General Douglas MacArthur",
+                "option_4": "Emperor Showa 'Hirohito'",
+                "answer": "General Dwight D. Eisenhower",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "Lead the United Arab Armies against the Christian Crusades",
+                "option_1": "Khalifa bin Zayed Al Nahyan",
+                "option_2": "Mohammed bin Rashid Al Maktoum",
+                "option_3": "Sultan Abdul Hamid II ",
+                "option_4": "Al-Nasir Salah al-Din Yusuf ibn Ayyub or Saladin",
+                "answer": "Al-Nasir Salah al-Din Yusuf ibn Ayyub or Saladin",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "Chairman of the Chinese Communist Party",
+                "option_1": "Sun Yat-sen",
+                "option_2": "Mao Zedong",
+                "option_3": "XI Jinping",
+                "option_4": "Hu Jintao",
+                "answer": "Mao Zedong",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "Leader of the Polish Solidarity Movement - First elected president of Poland",
+                "option_1": "Lech Walesa",
+                "option_2": "Zbigniew Brzezinski",
+                "option_3": "Witold Pilecki",
+                "option_4": "Józef Piłsudski",
+                "answer": "Lech Walesa",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "Led Carthage in a series of military victories over the Roman Empire",
+                "option_1": "Constantine the Great",
+                "option_2": "Hanibal Barca",
+                "option_3": "Julius Caesar",
+                "option_4": "King Arthur",
+                "answer": "Hanibal Barca",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "Tsar of all Russia (1682 – 1721) and Emperor of All Russia (1721-1735)",
+                "option_1": "Vladimir Lenin",
+                "option_2": "Mikhail Gorbachev",
+                "option_3": "Peter the Great ",
+                "option_4": "Rasputin",
+                "answer": "Peter the Great ",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "Leader of American forces during the War of Independence",
+                "option_1": "Abraham Lincoln",
+                "option_2": "John Adams",
+                "option_3": "George Washington",
+                "option_4": "Patrick henry",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }
+            
+        ]
     },
     {
-        "title": "U.S. Events, Landmarks & Monuments",
+        "title": "U.S. Landmarks & Monuments",
         "test_id": 901,
         "genre": "Landmarks",
         "genreId": "US",
         "head": "Geography",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "media_type": 0,
+        "questions":[
+            {
+                "question": "Located in West Potomac Park in D.C.",
+                "option_1": "Vietnam War Veterans Memorial",
+                "option_2": "Korean War Veterans’ Memorial",
+                "option_3": "Tomb of the Unknown Soldier",
+                "option_4": "Gettysburg National Cemetery",
+                "answer": "Korean War Veterans’ Memorial",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "This National Park is located in the Sierra Nevada in Californi",
+                "option_1": "Acadia National Park",
+                "option_2": "Great Smokey Mountains National Park",
+                "option_3": "Death Valley National Park",
+                "option_4": "Yosemite National Park",
+                "answer": "Yosemite National Park",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     },
     {
         "title": "Great Lines from Great Works",
@@ -741,23 +959,21 @@
         "genre": "Classic Literature",
         "genreId": "Classics",
         "head": "Literature",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "media_type": 0,
+        "questions":[
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     },
     {
         "title": "Famous Discoveries of Biological Science",
@@ -765,23 +981,21 @@
         "genre": "History of Biology",
         "genreId": "Life Science",
         "head": "Natural Science",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "media_type": 0,
+        "questions":[
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     },
     {
         "title": "Flags of the Americas",
@@ -789,23 +1003,191 @@
         "genre": "Geography",
         "genreId": "Flags",
         "head": "History & Geography",
-        "questions":[{
-            "target":[
+        "media_type": 1,
+        "questions":[
+            {
+                "question": "",
+                "option_1": "Peru",
+                "option_2": "Columbia",
+                "option_3": "Chile",
+                "option_4": "Panama",
+                "answer": "Columbia",
+                "img": "<img src='https://www.countryflags.io/co/flat/64.png'>",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "Dominican Republic",
+                "option_2": "Venezuela",
+                "option_3": "Panama",
+                "option_4": "Trinidad and Tobago",
+                "answer": "Panama",
+                "img": "<img src='https://www.countryflags.io/pa/flat/64.png'>",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "Guyana",
+                "option_2": "Grenada",
+                "option_3": "Bolivia",
+                "option_4": "Suriname",
+                "answer": "Guyana",
+                "img": "<img src='https://www.countryflags.io/gy/flat/64.png'>",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "Haiti",
+                "option_2": "Brazil",
+                "option_3": "Nicaragua",
+                "option_4": "Uruguay",
+                "answer": "Brazil",
+                "img": "<img src='https://www.countryflags.io/br/flat/64.png'>",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "Saint Kitts and Nevis",
+                "option_2": "Venezuela",
+                "option_3": "Dominican Republic",
+                "option_4": "Bahamas",
+                "answer": "Venezuela",
+                "img": "<img src='https://www.countryflags.io/ve/flat/64.png'>",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "Peru",
+                "option_2": "Cuba",
+                "option_3": "United States",
+                "option_4": "Trinidad and Tobago",
+                "answer": "Trinidad and Tobago",
+                "img": "<img src='https://www.countryflags.io/tt/flat/64.png'>",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "United States",
+                "option_2": "Costa Rica",
+                "option_3": "Cuba",
+                "option_4": "Honduras",
+                "answer": "United States",
+                "img": "<img src='https://www.countryflags.io/us/flat/64.png'>",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "Suriname",
+                "option_2": "Barbados",
+                "option_3": "Bahamas",
+                "option_4": "Uruguay",
+                "answer": "Bahamas",
+                "img": "<img src='https://www.countryflags.io/bb/flat/64.png'>",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "Grenada",
+                "option_2": "Dominica",
+                "option_3": "Guyana",
+                "option_4": "Peru",
+                "answer": "Peru",
+                "img": "<img src='https://www.countryflags.io/pe/flat/64.png'>",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "Cuba",
+                "option_2": "Mexico",
+                "option_3": "Ecuador",
+                "option_4": "Saint Lucia",
+                "answer": "Mexico",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            },
+            {
+                "question": "",
+                "option_1": "Saint Vincent and the Grenadines",
+                "option_2": "El Salvador",
+                "option_3": "Chile",
+                "option_4": "Argentina",
+                "answer": "El Salvador",
+                "img": "<img src='https://www.countryflags.io/sv/flat/64.png'>",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+                },
                 {
                     "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
+                    "option_1": "Chile",
+                    "option_2": "Columbia",
+                    "option_3": "Costa Rica",
+                    "option_4": "Honduras",
+                    "answer": "Chile",
+                    "img": "<img src='https://www.countryflags.io/cl/flat/64.png'>",
+                    "points": 34,
+                    "hint_1": "",
+                    "hint_2": "",
+                    "hint_3": ""
+                },
+                {
+                    "question": "",
+                    "option_1": "Panama",
+                    "option_2": "Belize",
+                    "option_3": "Jamaica",
+                    "option_4": "Barbados",
+                    "answer": "Jamaica",
+                    "img": "<img src='https://www.countryflags.io/jm/flat/64.png'>",
+                    "points": 34,
+                    "hint_1": "",
+                    "hint_2": "",
+                    "hint_3": ""
+                },
+                {
+                    "question": "",
+                    "option_1": "Saint Vincent and the Grenadines",
+                    "option_2": "Saint Lucia",
+                    "option_3": "Saint Kitts and Nevis",
+                    "option_4": "Dominica",
+                    "answer": "Saint Lucia",
+                    "img": "<img src='https://www.countryflags.io/lc/flat/64.png'>",
+                    "points": 34,
+                    "hint_1": "",
+                    "hint_2": "",
+                    "hint_3": ""
                 }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+            ]
     },
     {
         "title": "Flags of Europe",
@@ -813,23 +1195,20 @@
         "genre": "Geography",
         "genreId": "Flags",
         "head": "History & Geography",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "questions":[
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     },
     {
         "title": "The Elements of the Periodic Table",
@@ -837,23 +1216,20 @@
         "genre": "Science",
         "genreId": "Periodic Table",
         "head": "Natural Science",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "questions":[
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     },
     {
         "title": "Famous Companies That Changed Their Names",
@@ -861,23 +1237,20 @@
         "genre": "Buiness",
         "genreId": "Business History",
         "head": "Applied Science",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "questions":[
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     },
     {
         "title": "Zodiac Signs",
@@ -885,23 +1258,20 @@
         "genre": "Zodiac",
         "genreId": "Zodiac Signs",
         "head": "Religion",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "questions":[
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     },
     {
         "title": "Music of the 90s",
@@ -909,23 +1279,20 @@
         "genre": "Popular Muisc",
         "genreId": "Music History",
         "head": "Arts & Recreation",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "questions":[
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     },
     {
         "title": "Sounds of Motown",
@@ -933,23 +1300,20 @@
         "genre": "R&B Music",
         "genreId": "Music History",
         "head": "Arts & Recreation",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "questions":[
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     },
     {
         "title": "Famous Artists and Their Artwork",
@@ -957,23 +1321,20 @@
         "genre": "African-American Art",
         "genreId": "Artists and Artwork",
         "head": "Arts & Recreation",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "questions":[
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     },
     {
         "title": "Identifying Algebraic Equations",
@@ -981,23 +1342,20 @@
         "genre": "Algebra",
         "genreId": "Algebraic Equations",
         "head": "Mathematics",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "questions":[
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     },
     {
         "title": "Government Conspiracies - Health & Medicine",
@@ -1005,23 +1363,20 @@
         "genre": "Conspiracies",
         "genreId": "Medical Conspiracies",
         "head": "General Studies",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "questions":[
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     },
     {
         "title": "Government Conspiracies - Military",
@@ -1029,23 +1384,20 @@
         "genre": "Conspiracies",
         "genreId": "Military Conspiracies",
         "head": "General Studies",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "questions":[
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     },
     {
         "title": "The Alphabet in Sign Language",
@@ -1053,23 +1405,20 @@
         "genre": "Sign Language",
         "genreId": "Learning Sign Language",
         "head": "Language",
-        "questions":[{
-            "target":[
-                {
-                    "question": "",
-                    "option_1": "",
-                    "option_2": "",
-                    "option_3": "",
-                    "option_4": ""
-                }
-            ],
-            "answer": "",
-            "img": "",
-            "points": 34,
-            "hint_1": "",
-            "hint_2": "",
-            "hint_3": ""
-        }]
+        "questions":[
+            {
+                "question": "",
+                "option_1": "",
+                "option_2": "",
+                "option_3": "",
+                "option_4": "",
+                "answer": "",
+                "img": "",
+                "points": 34,
+                "hint_1": "",
+                "hint_2": "",
+                "hint_3": ""
+            }]
     }
 ]
 

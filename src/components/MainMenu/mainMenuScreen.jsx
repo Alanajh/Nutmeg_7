@@ -5,8 +5,9 @@ import '../../css/mainMenu.css';
 import Help from './helpScreen';
 import Reference from './referenceScreen';
 import EditCreateTests from './testOptions/editCreateTest';
-import TakeTest from '../takeTest';
+
 import RoomReach from './roomReachScreen'
+import { Credits } from '../credits';
 
 class Menu extends Component {
     constructor(props){
@@ -19,7 +20,7 @@ class Menu extends Component {
             roomreachScreen: false,
             testScreen: false,
             mainMenu: true,
-            x: false,
+            credits: false,
         }
     }
     
@@ -76,13 +77,13 @@ class Menu extends Component {
             this.setState({ liveScreen: false});
         }
     }
-    xtra = () => {
-        if(this.state.x === false){
-            this.setState({ x: true});
+    creditstra = () => {
+        if(this.state.credits === false){
+            this.setState({ credits: true});
             this.mainMenu();
 
         }else{
-            this.setState({ x: false});
+            this.setState({ credits: false});
         }
     }
     render() {
@@ -92,7 +93,7 @@ class Menu extends Component {
             <div>{this.state.helpScreen ? <Help/> : null }</div>
             <div>{this.state.roomreachScreen ? <RoomReach/> : null }</div>
             <div>{this.state.testScreen ? <EditCreateTests/> : null }</div>
-            <div>{this.state.x ? <TakeTest/> : null }</div>
+            <div>{this.state.credits ? <Credits/> : null }</div>
             <table id="mainmenu">
             <thead></thead>
                 <tbody>
@@ -128,7 +129,7 @@ class Menu extends Component {
                 </tr>
                 <tr>
                     <td></td>
-                    <td><button id="menuBtn" onClick={this.xtra}>X</button></td>
+                    <td><button id="menuBtn" onClick={this.creditstra}>Credits</button></td>
                     <td></td>
                 </tr>
                 </tbody>

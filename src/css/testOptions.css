@@ -9,7 +9,6 @@
 #menuBtnHldr, #group_TestBtns{
     display: flex;
     justify-content: center;
-    padding-top: 40px;
     text-align: center;
 }
 #pgCreateComponent, #pgTestpage{
@@ -17,7 +16,6 @@
     justify-content: center;
 }
 #testForm{
-    padding-top:50px;
     text-align: center;
     vertical-align: middle;
 }

@@ -3,13 +3,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/testComp.css';
 //import test_titles from '../json/testing_test_titles.json';
-import Test from '../components/testComp';
-import TakeTest from './takeTest';
+import { Test } from '../components/testComp'
 
 import TestQuestionList from '../json/testListQuestions.json'
 
 import { IoFilterSharp } from 'react-icons/io5';
 import { BiSort } from 'react-icons/bi'
+import TakeTest from './takeTest';
 
 /*   const open_link = test_titles.map(item => {
     console.log(item.value);
@@ -42,12 +42,10 @@ export class TestTitles extends Component {
         this.state = {
             sorted: false,
             turnOnTest: false,
+            selectedTestData: false,
         }
     }
 
-    tryA = () => {
-
-    }
     // selects and filters the test based on the json value that equals the index of the clicked test
     selectTest = (index, e) => {
        return  console.log(TestQuestionList
@@ -70,16 +68,40 @@ export class TestTitles extends Component {
 
     // takes the selectTest and presents the correct title
     target = (identifier, i) => {
-       // console.log(i.test_id)
-       this.setState({ turnOnTest: true })
-        return console.log(i.questions.map(data => {
+    //console.log(i.title)
+    let testListScreen = document.getElementById("completeList");
+    
+       if(i.media_type === 0){
+           this.setState({ selectedTestData: true });
+           console.log("Regular Test");
+           testListScreen.hidden = true;
+           document.getElementById("testList").innerHTML = i.title;
+           //testList.innerHTML = i.title;
+           this.setState({ turnOnTest: true });
+       }else{
+           console.log("Media Test");
+       }
+       /*  return console.log(i.questions.map(data => {
             return data.question
-        }));
+        })); */
     }
 
     render() {
         return   <div>
             <div>{this.state.turnOnTest ? <TakeTest/> : null }</div>
+            
+            <div>
+                <Row>
+                    <Col xs={2}></Col>
+                    <Col xs={8} style={{textAlign: 'center' }} id="testList"></Col>
+                    <Col xs={2}></Col>
+                </Row>
+                <Row>
+                    <Col xs={2}></Col>
+                    
+                    <Col xs={2}></Col>
+                </Row>
+            </div>
             <div id="completeList">
              <Container id="container">
                 <Row id="testRowHeader">
@@ -94,13 +116,17 @@ export class TestTitles extends Component {
                 </Row> 
             </Container> 
             
+            
             {TestQuestionList.map((item, index) => {
-                return (<Test 
+                return (
+                    <div>
+                <Test 
                     key={item.test_id}
                     id={index} 
                     identifier={item.genre}
                     selectCurrent={this.target.bind(this, index, item)}
-                    >{item.title}</Test>)
+                    >{item.title}</Test>
+                    </div>)
             })}
            </div>
         </div>

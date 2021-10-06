@@ -4,20 +4,17 @@ import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/testComp.css';
 
-export const Test = (props) => {
+export const Test2 = (props) => {
     return (
             <Container id="container">
-                <Row id="testRows">
-                    <Col xs={10} id="testCol">
+                <Row>
+                <Col xs={12} id="testCol">
                         <button  id="textBtnSelect" onClick={props.selectCurrent}>
                             <span>{props.children}</span>  
                         </button> 
                     </Col>
-                    <Col xs={2} id="testGenre">
-                        {props.identifier}
-                    </Col>
-                </Row> 
+                    </Row>
             </Container>)
 }
 
-export default Test;
+export default Test2;
