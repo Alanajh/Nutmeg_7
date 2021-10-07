@@ -135,12 +135,12 @@ class TakeTest extends Component {
           {/*  { this.state.scoreScreen ? <Scores len={testQuestionsList[this.state.target].questions.length} right={this.state.right} score_Percentage={this.state.score_Percentage}/> : null }
            */}<div id="mainTestBoard">
            <Container fluid>
-               <Test/>
-                <Row>
+              {/*  <Test/> */}
+                {/* <Row>
                     <Col><img src={nutmegLogo} id="logo" alt="logo" ></img></Col>
                     <Col id="appName" xs={8}><h3>N * U * T * M * E * G</h3></Col>
                     <Col id="score">{this.state.questions}/{testQuestionsList.length}</Col>
-                </Row>
+                </Row> */}
             
                 <Row id="currentTest">
                    {/*  <Col id="c"></Col> */}

@@ -1,8 +1,8 @@
 import { React, Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/testComp.css';
-//import test_titles from '../json/testing_test_titles.json';
+import nutmegLogo from '../media/nutmeg-800x800.png';
 import { Test } from '../components/testComp'
 
 import TestQuestionList from '../json/testListQuestions.json'
@@ -42,10 +42,17 @@ export class TestTitles extends Component {
         this.state = {
             sorted: false,
             turnOnTest: false,
+            advanceQuestions: 0,
             selectedTestData: false,
+            target: 0,
+            testChoice: 0,
         }
     }
 
+    componentDidMount = () =>{
+        document.getElementById("testQuestions").hidden = true;
+        document.getElementById("testData").hidden = true;
+    }
     // selects and filters the test based on the json value that equals the index of the clicked test
     selectTest = (index, e) => {
        return  console.log(TestQuestionList
@@ -66,11 +73,37 @@ export class TestTitles extends Component {
         }
     }
 
+    answers = () => {
+        let answers = document.getElementsByName("answers");
+        let verifiedAnswer = document.getElementById("verifiedAnswer");
+
+        if(answers[0].checked){ verifiedAnswer.innerHTML = TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_1; }
+        else if(answers[1].checked){ verifiedAnswer.innerHTML = TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_2; }
+        else if(answers[2].checked){ verifiedAnswer.innerHTML = TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_3; }
+        else if(answers[3].checked){ verifiedAnswer.innerHTML = TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_4; }
+    
+    }
+    getNext = (identifier, i) => {
+        let answers = document.getElementsByName("answers");
+        let verifiedAnswer = document.getElementById("verifiedAnswer");
+        console.log(identifier +  ": " + i)
+        this.setState({ advanceQuestions: this.state.advanceQuestions + 1});
+        answers[0].checked = false;
+        answers[1].checked = false;
+        answers[2].checked = false;
+        answers[3].checked = false;     
+        verifiedAnswer.innerHTML = "__________________________";  
+    }
     // takes the selectTest and presents the correct title
     target = (identifier, i) => {
     //console.log(i.title)
+    
     let testListScreen = document.getElementById("completeList");
     document.getElementById("testTitleSelected").innerHTML = i.title;
+    document.getElementById("testQuestions").hidden = false;
+    document.getElementById("testData").hidden = false;
+    
+    this.setState({target: identifier});
        if(i.media_type === 0){
            this.setState({ selectedTestData: true });
            console.log("Regular Test");
@@ -89,17 +122,48 @@ export class TestTitles extends Component {
         return   <div>
             <div>{this.state.turnOnTest ? <TakeTest/> : null }</div>
             
-            <div>
-                <Row>
-                    <Col xs={2}></Col>
-                    <Col xs={8} style={{textAlign: 'center' }} id="testTitleSelected"></Col>
-                    <Col xs={2}></Col>
+            <div id="testData">
+            <Container>
+            <Row>
+                    <Col><img src={nutmegLogo} id="logo" alt="logo" ></img></Col>
+                    <Col id="appName" xs={8}><h3>N * U * T * M * E * G</h3></Col>
+                    <Col id="score">{this.state.advanceQuestions + 1}/{TestQuestionList[this.state.target].questions.length}</Col>
                 </Row>
                 <Row>
                     <Col xs={2}></Col>
-                    <Col xs={8} style={{textAlign: 'center' }} id="testQuestions"></Col>
+                    <Col xs={8} style={{textAlign: 'center', fontWeight: 'bold',  letterSpacing: 3 }} id="testTitleSelected"></Col>
                     <Col xs={2}></Col>
                 </Row>
+                <Row>
+                <Col xs={2}></Col>
+                    <Col xs={8} style={{textAlign: 'center' }} id="testQuestionsSelected">{TestQuestionList[this.state.target].questions[this.state.advanceQuestions].question}</Col>
+                    <Col xs={2}></Col>
+                </Row>
+                <Row>
+                    <Col xs={3}></Col>
+                    <Col xs={7} style={{textAlign: 'center' }} id="testQuestions">
+                    <div id="unorderedList" > 
+                        <p key="1"/><input type="radio" id="choice1" name="answers" value="choice1" onClick={this.answers}/> {TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_1}
+                        <p key="2"/><input type="radio" id="choice2" name="answers" value="choice2" onClick={this.answers}/> {TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_2} 
+                        <p key="3"/><input type="radio" id="choice3" name="answers" value="choice3" onClick={this.answers}/> {TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_3} 
+                        <p key="4"/><input type="radio" id="choice4" name="answers" value="choice4" onClick={this.answers}/> {TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_4} 
+                    </div>
+                    </Col>
+                    <Col xs={2}></Col>
+                </Row>
+                <Row>
+                    <Col></Col>
+                    <Col> <div id="verifiedAnswer" style={{ textAlign: 'center'}}>__________________________</div></Col>
+                    <Col></Col>
+                </Row>
+                <Row>
+                    <Col xs={2}></Col>
+                    <Col xs={8} style={{textAlign: 'center', margin: '20px' }}>
+                        <Button onClick={this.getNext} id="submitBtn">Submit</Button>
+                    </Col>
+                    <Col xs={2}></Col>
+                </Row>
+                </Container>
             </div>
             <div id="completeList">
              <Container id="container">
