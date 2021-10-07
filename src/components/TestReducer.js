@@ -102,7 +102,6 @@ export class TestTitles extends Component {
     document.getElementById("testTitleSelected").innerHTML = i.title;
     document.getElementById("testQuestions").hidden = false;
     document.getElementById("testData").hidden = false;
-    
     this.setState({target: identifier});
        if(i.media_type === 0){
            this.setState({ selectedTestData: true });
@@ -137,6 +136,11 @@ export class TestTitles extends Component {
                 <Row>
                 <Col xs={2}></Col>
                     <Col xs={8} style={{textAlign: 'center' }} id="testQuestionsSelected">{TestQuestionList[this.state.target].questions[this.state.advanceQuestions].question}</Col>
+                    <Col xs={2}></Col>
+                </Row>
+                <Row>
+                <Col xs={2}></Col>
+                    <Col xs={8} style={{textAlign: 'center' }} id="testQuestionsMedia"><img src={TestQuestionList[this.state.target].questions[this.state.advanceQuestions].img}/></Col>
                     <Col xs={2}></Col>
                 </Row>
                 <Row>
