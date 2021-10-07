@@ -40,6 +40,7 @@ export class TestTitles extends Component {
     constructor(props){
         super(props);
         this.state = {
+            score: 0,
             sorted: false,
             turnOnTest: false,
             advanceQuestions: 0,
@@ -81,23 +82,34 @@ export class TestTitles extends Component {
         else if(answers[1].checked){ verifiedAnswer.innerHTML = TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_2; }
         else if(answers[2].checked){ verifiedAnswer.innerHTML = TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_3; }
         else if(answers[3].checked){ verifiedAnswer.innerHTML = TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_4; }
-    
+        
     }
     getNext = (identifier, i) => {
         let answers = document.getElementsByName("answers");
         let verifiedAnswer = document.getElementById("verifiedAnswer");
-        console.log(identifier +  ": " + i)
+        
         this.setState({ advanceQuestions: this.state.advanceQuestions + 1});
         answers[0].checked = false;
         answers[1].checked = false;
         answers[2].checked = false;
         answers[3].checked = false;     
         verifiedAnswer.innerHTML = "__________________________";  
+
+        if (verifiedAnswer.innerHTML === TestQuestionList[this.state.target].questions[this.state.advanceQuestions].answer){
+            this.setState({ score: this.state.score + 1 });
+            console.log("score: " + this.state.score)
+        }else{
+            this.setState({ score: this.state.score + 0 });
+            console.log("score: " + this.state.score)
+        }
+
+        if(this.state.advanceQuestions + 1 > TestQuestionList[this.state.target].questions.length){
+            console.log("")
+        }
+        
     }
     // takes the selectTest and presents the correct title
     target = (identifier, i) => {
-    //console.log(i.title)
-    
     let testListScreen = document.getElementById("completeList");
     document.getElementById("testTitleSelected").innerHTML = i.title;
     document.getElementById("testQuestions").hidden = false;
