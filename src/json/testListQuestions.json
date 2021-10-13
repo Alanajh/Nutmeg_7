@@ -59,6 +59,20 @@
                 "hint_2": "44",
                 "hint_3": "Yes We Can"
             }
+            ,
+            {
+                "question": "Abraham Lincoln",
+                "option_1": "The Civil War Started, which was fought between states supporting the federal union ('the Union' or 'the North') and southern states that voted to secede and form the Confederate States of America ('the Confederacy' or 'the South').",
+                "option_2": "The Great Depression Started, was a severe worldwide economic depression.",
+                "option_3": "Completion of Mount Rushmore, where the presidents carved on Mount Rushmore are said to symbolize American freedom and democracy.",
+                "option_4": "The Louisiana Purchase, which was a land deal between the United States and France, in which the U.S. acquired approximately 827,000 square miles of land west of the Mississippi River.",
+                "answer": "The Civil War Started, which was fought between states supporting the federal union ('the Union' or 'the North') and southern states that voted to secede and form the Confederate States of America ('the Confederacy' or 'the South').",
+                "img": "",
+                "points": 34,
+                "hint_1": "Yes We Can",
+                "hint_2": "44",
+                "hint_3": "Yes We Can"
+            }
         ]
     },
     {

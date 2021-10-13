@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/testComp.css';
 import nutmegLogo from '../media/nutmeg-800x800.png';
 import { Test } from '../components/testComp'
+import FinalScore from './finalScore';
 
 import TestQuestionList from '../json/testListQuestions.json'
 
@@ -40,13 +41,14 @@ export class TestTitles extends Component {
     constructor(props){
         super(props);
         this.state = {
+            advanceQuestions: 0,
+            finalScore: 0,
+            selectedTestData: false,
             score: 0,
             sorted: false,
-            turnOnTest: false,
-            advanceQuestions: 0,
-            selectedTestData: false,
             target: 0,
             testChoice: 0,
+            turnOnTest: false,
         }
     }
 
@@ -82,19 +84,6 @@ export class TestTitles extends Component {
         else if(answers[1].checked){ verifiedAnswer.innerHTML = TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_2; }
         else if(answers[2].checked){ verifiedAnswer.innerHTML = TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_3; }
         else if(answers[3].checked){ verifiedAnswer.innerHTML = TestQuestionList[this.state.target].questions[this.state.advanceQuestions].option_4; }
-        
-    }
-    getNext = (identifier, i) => {
-        let answers = document.getElementsByName("answers");
-        let verifiedAnswer = document.getElementById("verifiedAnswer");
-        
-        this.setState({ advanceQuestions: this.state.advanceQuestions + 1});
-        answers[0].checked = false;
-        answers[1].checked = false;
-        answers[2].checked = false;
-        answers[3].checked = false;     
-        verifiedAnswer.innerHTML = "__________________________";  
-
         if (verifiedAnswer.innerHTML === TestQuestionList[this.state.target].questions[this.state.advanceQuestions].answer){
             this.setState({ score: this.state.score + 1 });
             console.log("score: " + this.state.score)
@@ -103,8 +92,25 @@ export class TestTitles extends Component {
             console.log("score: " + this.state.score)
         }
 
-        if(this.state.advanceQuestions + 1 > TestQuestionList[this.state.target].questions.length){
-            console.log("")
+    }
+    getNext = (identifier, i) => {
+        let answers = document.getElementsByName("answers");
+        let verifiedAnswer = document.getElementById("verifiedAnswer");
+        
+        answers[0].checked = false;
+        answers[1].checked = false;
+        answers[2].checked = false;
+        answers[3].checked = false;     
+        verifiedAnswer.innerHTML = "__________________________";  
+
+        if(this.state.advanceQuestions === TestQuestionList[this.state.target].questions.length - 1){
+            console.log("Finished");
+            document.getElementById("testData").hidden = true;
+            this.setState({ target: 0 });
+;           this.setState({ advanceQuestions: 0 });
+            this.setState({ finalScore: true });
+        }else{
+            this.setState({ advanceQuestions: this.state.advanceQuestions + 1});
         }
         
     }
@@ -116,13 +122,13 @@ export class TestTitles extends Component {
     document.getElementById("testData").hidden = false;
     this.setState({target: identifier});
        if(i.media_type === 0){
+           //Reg test
            this.setState({ selectedTestData: true });
-           console.log("Regular Test");
            document.getElementById("testTitleSelected").innerHTML = i.title
            testListScreen.hidden = true;
            this.setState({ turnOnTest: true });
        }else{
-           console.log("Media Test");
+           //Media test
            testListScreen.hidden = true;
            document.getElementById("testTitleSelected").innerHTML = i.title
            this.setState({ turnOnTest: true });
@@ -131,7 +137,7 @@ export class TestTitles extends Component {
 
     render() {
         return   <div>
-            <div>{this.state.turnOnTest ? <TakeTest/> : null }</div>
+            <div>{this.state.finalScore ? <FinalScore>{this.state.score}</FinalScore> : null} </div>
             
             <div id="testData">
             <Container>
