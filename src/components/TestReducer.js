@@ -10,8 +10,6 @@ import TestQuestionList from '../json/testListQuestions.json'
 
 import { IoFilterSharp } from 'react-icons/io5';
 import { BiSort } from 'react-icons/bi'
-import TakeTest from './takeTest';
-
 /*   const open_link = test_titles.map(item => {
     console.log(item.value);
   });
@@ -104,7 +102,6 @@ export class TestTitles extends Component {
         verifiedAnswer.innerHTML = "__________________________";  
 
         if(this.state.advanceQuestions === TestQuestionList[this.state.target].questions.length - 1){
-            console.log("Finished");
             document.getElementById("testData").hidden = true;
             this.setState({ target: 0 });
 ;           this.setState({ advanceQuestions: 0 });
@@ -117,6 +114,9 @@ export class TestTitles extends Component {
     // takes the selectTest and presents the correct title
     target = (identifier, i) => {
     let testListScreen = document.getElementById("completeList");
+    let testQuestionsMedia = document.getElementById("testQuestionsMedia");
+
+
     document.getElementById("testTitleSelected").innerHTML = i.title;
     document.getElementById("testQuestions").hidden = false;
     document.getElementById("testData").hidden = false;
@@ -126,27 +126,36 @@ export class TestTitles extends Component {
            this.setState({ selectedTestData: true });
            document.getElementById("testTitleSelected").innerHTML = i.title
            testListScreen.hidden = true;
+           testQuestionsMedia.hidden = true;
            this.setState({ turnOnTest: true });
        }else{
            //Media test
            testListScreen.hidden = true;
+           testQuestionsMedia.hidden = false;
            document.getElementById("testTitleSelected").innerHTML = i.title
            this.setState({ turnOnTest: true });
        }
     }
 
+    
     render() {
         return   <div>
-            <div>{this.state.finalScore ? <FinalScore>{this.state.score}</FinalScore> : null} </div>
-            
+
+            {/* STOPPED WORKING HERE ON 10/13/21 */}
+            <div>{this.state.finalScore ? 
+            <container>
+                <FinalScore>{this.state.score}</FinalScore> : null} 
+            </container>
+            </div>
+            /* END ON STOPPED WORK FOR 10/13/21 */
             <div id="testData">
-            <Container>
+            <Container fluid>
             <Row>
-                    <Col><img src={nutmegLogo} id="logo" alt="logo" ></img></Col>
-                    <Col id="appName" xs={8}><h3>N * U * T * M * E * G</h3></Col>
-                    <Col id="score">{this.state.advanceQuestions + 1}/{TestQuestionList[this.state.target].questions.length}</Col>
+                    <Col xs={2}><img src={nutmegLogo} id="logoNutmeg" alt="logo" ></img></Col>
+                    <Col id="appName" xs={8}><h4>N * U * T * M * E * G</h4></Col>
+                    <Col id="score" xs={2}>{this.state.advanceQuestions + 1}/{TestQuestionList[this.state.target].questions.length}</Col>
                 </Row>
-                <Row>
+                <Row id="titleRow">
                     <Col xs={2}></Col>
                     <Col xs={8} style={{textAlign: 'center', fontWeight: 'bold',  letterSpacing: 3 }} id="testTitleSelected"></Col>
                     <Col xs={2}></Col>

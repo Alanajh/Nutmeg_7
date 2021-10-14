@@ -1,7 +1,16 @@
+#appName{
+    text-align: center;
+}
 #container{
     display: flex;
     margin:0;
     width: 100vw
+}
+#logoNutmeg{
+    width: 70%;;
+}
+#testData{
+    width: 100vw;
 }
 #testGenre{
     border-bottom: 1px solid red;
@@ -26,4 +35,7 @@
 }
 #textBtnSelect{
     border: none;
+}
+#titleRow{
+    padding-bottom: 12px;;
 }
