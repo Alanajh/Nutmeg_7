@@ -17,7 +17,7 @@ export const FinalScore = (props) => {
         <Col xs={2}></Col>
         <Col xs={8} id="appName">
             <span style={{fontSize: 36}} key={props.children}>{props.children}</span>
-            s<p>Complete</p>
+            <p>Fin</p>
         </Col>
         <Col xs={2}></Col>
     </Row>

@@ -53,6 +53,7 @@ export class TestTitles extends Component {
     componentDidMount = () =>{
         document.getElementById("testQuestions").hidden = true;
         document.getElementById("testData").hidden = true;
+        document.getElementById("finalPercentage").hidden = true;
     }
     // selects and filters the test based on the json value that equals the index of the clicked test
     selectTest = (index, e) => {
@@ -94,7 +95,15 @@ export class TestTitles extends Component {
     getNext = (identifier, i) => {
         let answers = document.getElementsByName("answers");
         let verifiedAnswer = document.getElementById("verifiedAnswer");
-        
+        let correct = this.state.score;
+        let total = TestQuestionList[this.state.target].questions.length;
+        let percent = ((correct/total) * 100).toFixed(0) + "%";
+
+        if (((correct/total) * 100) < 60){
+            document.getElementById("completeMessage").innerHTML = "You did NOT pass"
+        } else {
+            document.getElementById("completeMessage").innerHTML = "You passed"
+        }
         answers[0].checked = false;
         answers[1].checked = false;
         answers[2].checked = false;
@@ -104,8 +113,10 @@ export class TestTitles extends Component {
         if(this.state.advanceQuestions === TestQuestionList[this.state.target].questions.length - 1){
             document.getElementById("testData").hidden = true;
             this.setState({ target: 0 });
-;           this.setState({ advanceQuestions: 0 });
+            this.setState({ advanceQuestions: 0 });
             this.setState({ finalScore: true });
+            document.getElementById("finalPercentage").hidden = false;
+            document.getElementById("finalPercentage").innerHTML = percent;
         }else{
             this.setState({ advanceQuestions: this.state.advanceQuestions + 1});
         }
@@ -115,7 +126,6 @@ export class TestTitles extends Component {
     target = (identifier, i) => {
     let testListScreen = document.getElementById("completeList");
     let testQuestionsMedia = document.getElementById("testQuestionsMedia");
-
 
     document.getElementById("testTitleSelected").innerHTML = i.title;
     document.getElementById("testQuestions").hidden = false;
@@ -140,14 +150,9 @@ export class TestTitles extends Component {
     
     render() {
         return   <div>
-
-            {/* STOPPED WORKING HERE ON 10/13/21 */}
-            <div>{this.state.finalScore ? 
-            <container>
-                <FinalScore>{this.state.score}</FinalScore> : null} 
-            </container>
-            </div>
-            /* END ON STOPPED WORK FOR 10/13/21 */
+            <div>{this.state.finalScore ? <FinalScore >{this.state.score}</FinalScore>: null} </div>
+            <div id="finalPercentage"></div>
+            <div id="completeMessage"></div>
             <div id="testData">
             <Container fluid>
             <Row>
